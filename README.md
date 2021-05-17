@@ -3,4 +3,7 @@
 The repository will hold CS226 Project 2020-21
 
 ## Progress
-1. Added adder and nand16 vhd files
+Components are ready for datapath
+
+## ToDo
+Join components and Code FSM
