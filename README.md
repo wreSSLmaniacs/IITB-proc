@@ -3,7 +3,7 @@
 The repository will hold CS226 Project 2020-21
 
 ## Progress
-Components are ready for datapath
+Datapath code ready for synthesis
 
 ## ToDo
-Join components and Code FSM
+Code FSM and Test. Please do.

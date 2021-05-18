@@ -1,0 +1,55 @@
+library work;
+use work.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity datapath is
+	port
+		(
+			-- controls pins
+			m_dc, m_re, m_we : in std_logic; -- memory controls
+			upd_ir, upd_pc, upd_tr, upd_c, upd_z : in std_logic; -- update controls
+			alu_op, alu_cin, alu_ext, alu_sa : in std_logic; -- alu controls
+			rf_re1, rf_re2, rf_we : in std_logic; -- rf enables
+			rf_r1c : in std_logic; -- rf read port 1 control
+			rf_wc, rf_dc : in std_logic_vector(1 downto 0); -- rf write port and data controls
+			rf_wac, rf_r1ac : in std_logic_vector(1 downto 0); -- rf readwrite address controls (for readall and writeall)
+			
+			-- state inference pins
+			ir : buffer std_logic_vector(15 downto 0);
+			c,z : buffer std_logic;
+			z : out std_logic;
+		);
+end entity;
+
+architecture behv of datapath is
+	
+	component ALU
+		port
+		(
+			a,b : in std_logic_vector (15 downto 0);
+			imm : in std_logic_vector (5 downto 0);
+			cin, op : in std_logic;
+			ext, sa : in std_logic;
+			o : out std_logic_vector (15 downto 0);
+			cout, zero : out std_logic
+		);
+	end component;
+	
+	component memory
+	   port
+		(
+			clk : in std_logic;
+			data : in std_logic_vector (15 downto 0);
+			wa : in std_logic_vector (15 downto 0);
+			ra : in std_logic_vector (15 downto 0);
+			we, re : in std_logic;
+			o : out std_logic_vector (15 downto 0)
+		);
+	end component;
+	
+	component RF
+	
+begin
+end architecture;

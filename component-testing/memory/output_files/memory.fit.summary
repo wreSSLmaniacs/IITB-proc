@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon May 17 20:24:41 2021
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : memory
+Top-level Entity Name : memory
+Family : Cyclone 10 LP
+Device : 10CL055YF484C6G
+Timing Models : Final
+Total logic elements : 106 / 55,856 ( < 1 % )
+    Total combinational functions : 104 / 55,856 ( < 1 % )
+    Dedicated logic registers : 3 / 55,856 ( < 1 % )
+Total registers : 3
+Total pins : 66 / 322 ( 20 % )
+Total virtual pins : 0
+Total memory bits : 1,048,576 / 2,396,160 ( 44 % )
+Embedded Multiplier 9-bit elements : 0 / 312 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

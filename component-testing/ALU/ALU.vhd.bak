@@ -1,0 +1,59 @@
+library work;
+use work.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity ALU is
+	port
+		(
+			a,b : in std_logic_vector (15 downto 0);
+			imm : in std_logic_vector (5 downto 0);
+			cin, op, b_ext : in std_logic;
+			o : out std_logic_vector (15 downto 0);
+			cout, zero : out std_logic
+		);
+end entity;
+
+architecture behv of ALU is
+
+	component extend_6_16
+		port	
+		(
+			i : in std_logic_vector(5 downto 0);
+			o : out std_logic_vector(15 downto 0)
+		);
+	end component;
+
+	component nand16
+		port
+		(
+			a,b : in std_logic_vector(15 downto 0);
+			o : out std_logic_vector(15 downto 0)
+		);
+	end component;
+
+	component adder
+			port
+		(
+			a,b : in std_logic_vector (15 downto 0);
+			cin : in std_logic;
+			sum : out std_logic_vector (15 downto 0);
+			cout : out std_logic
+		);
+	end component;
+	
+	signal ext_out, add_out, nand_out : std_logic_vector (15 downto 0);
+	signal cout_gen : std_logic;
+	
+begin
+	ext : extend_6_16
+		port map ( i => imm, o => ext_out);
+	add : adder
+		port map ( a => a, b => b when b_ext = '0' else ext_out, cin => cin, sum => add_out, cout => cout_gen );
+	logic : nand16
+		port map ( a => a, b => b, o => nand_out );
+	o <= add_out when op = '0' else nand_out;
+	zero <= '1' when o = "0000000000000000" else '0';
+	cout <= cout when op = '1' else cout_gen;
+end architecture;
