@@ -1,0 +1,29 @@
+library work;
+use work.all;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity controller is
+	port 
+		(
+			clk : in std_logic;
+			
+			-- controls pins
+			m_we, m_rac, m_wac : out std_logic; -- memory controls
+			
+			upd_ir, upd_pc, trc, pc_c, upd_c, upd_z : out std_logic; -- update controls
+			
+			alu_op, alu_cin : out std_logic; -- alu internal controls
+			alu_ac, alu_bc : out std_logic_vector(1 downto 0); -- alu input controls
+			
+			rf_we : out std_logic; -- rf enables
+			rf_rc : out std_logic; -- rf read port 1 control
+			rf_wc, rf_dc : out std_logic_vector(1 downto 0); -- rf write port and data controls
+			rf_master : out std_logic_vector(2 downto 0); -- rf master address
+			
+			zc : out std_logic;
+			
+			-- state inference pins
+			ir : buffer std_logic_vector(15 downto 0);
+			c,z : buffer std_logic;
