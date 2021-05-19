@@ -1,35 +1,5 @@
 ---------------------------------------------------------------------------------------------------------
 
--- extender
-
-library work;
-use work.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-
-entity extend_6_16 is
-	port
-		(
-			input : in std_logic_vector(5 downto 0);
-			output : out std_logic_vector(15 downto 0)
-		);
-end entity;
-
-architecture behv of extend_6_16 is
-begin
-	c1 : for I in 4 downto 0 generate
-		output(I) <= input(I);
-	end generate;
-	c2 : for I in 15 downto 5 generate
-		output(I) <= input(5);
-	end generate;
-end architecture;
-
----------------------------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------------------------
-
 -- adder
 
 library work;
@@ -207,23 +177,13 @@ entity ALU is
 	port
 		(
 			a,b : in std_logic_vector (15 downto 0);
-			imm : in std_logic_vector (5 downto 0);
 			cin, op : in std_logic;
-			ext, sa : in std_logic;
 			o : out std_logic_vector (15 downto 0);
 			cout, zero : out std_logic
 		);
 end entity;
 
 architecture behv of ALU is
-
-	component extend_6_16
-		port	
-		(
-			input : in std_logic_vector(5 downto 0);
-			output : out std_logic_vector(15 downto 0)
-		);
-	end component;
 
 	component nand16
 		port
@@ -243,18 +203,13 @@ architecture behv of ALU is
 		);
 	end component;
 	
-	signal ext_out, bin, ain, add_out, nand_out, f_out : std_logic_vector (15 downto 0);
-	
+	signal add_out, nand_out, f_out : std_logic_vector(15 downto 0);
 begin
-	extender : extend_6_16
-		port map ( input => imm, output => ext_out);
-	bin <= ext_out when ( ext = '1' and sa = '0' ) else b;
-	ain <= ext_out when ( ext = '1' and sa = '1' ) else a;
 	add : adder
-		port map ( a => ain, b => bin, cin => cin, sum => add_out, cout => cout );
+		port map ( a => a, b => b, cin => cin, sum => add_out, cout => cout );
 	logic : nand16
 		port map ( a => a, b => b, o => nand_out );
-	f_out <= add_out when op = '0' else nand_out;
+	f_out <= nand_out when op = '1' else add_out;
 	zero <= '1' when f_out = "0000000000000000" else '0';
 	o <= f_out;
 end architecture;

@@ -12,7 +12,7 @@ entity memory is
 			data : in std_logic_vector (15 downto 0);
 			wa : in std_logic_vector (15 downto 0);
 			ra : in std_logic_vector (15 downto 0);
-			re, we : in std_logic;
+			we : in std_logic;
 			o : out std_logic_vector (15 downto 0)
 		);
 end entity;
@@ -27,9 +27,7 @@ begin
          if (we = '1') then
             ram (to_integer(unsigned(wa))) <= data;
          end if;
-			if (re = '1') then
-				o <= ram (to_integer(unsigned(ra)));
-			end if;
+			o <= ram (to_integer(unsigned(ra)));
       end if;
 	end process;
 end architecture;

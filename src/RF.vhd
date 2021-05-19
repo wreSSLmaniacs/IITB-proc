@@ -12,7 +12,6 @@ entity RF is
 			data : in std_logic_vector (15 downto 0);
 			wa : in std_logic_vector (2 downto 0);
 			we : in std_logic;
-			re1, re2 : in std_logic;
 			ra1, ra2 : in std_logic_vector (2 downto 0);
 			o1, o2 : out std_logic_vector (15 downto 0)
 		);
@@ -22,18 +21,14 @@ architecture behv OF RF is
    type mem is array (0 to 7) of std_logic_vector(15 downto 0);
    signal regfile : mem;
 begin
+	o1 <= regfile (to_integer(unsigned(ra1)));
+	o2 <= regfile (to_integer(unsigned(ra2)));
    process (clk)
    begin
       if rising_edge(clk) then
          if (we = '1') then
             regfile (to_integer(unsigned(wa))) <= data;
          end if;
-			if (re1 = '1') then
-				o1 <= regfile (to_integer(unsigned(ra1)));
-			end if;
-			if (re2 = '1') then
-				o2 <= regfile (to_integer(unsigned(ra2)));
-			end if;
       end if;
 	end process;
 end architecture;
