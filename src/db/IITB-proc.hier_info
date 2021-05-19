@@ -1,4 +1,43 @@
-|datapath
+|iitbproc
+wa[0] => datapath:dp.master_wa[0]
+wa[1] => datapath:dp.master_wa[1]
+wa[2] => datapath:dp.master_wa[2]
+wa[3] => datapath:dp.master_wa[3]
+wa[4] => datapath:dp.master_wa[4]
+wa[5] => datapath:dp.master_wa[5]
+wa[6] => datapath:dp.master_wa[6]
+wa[7] => datapath:dp.master_wa[7]
+wa[8] => datapath:dp.master_wa[8]
+wa[9] => datapath:dp.master_wa[9]
+wa[10] => datapath:dp.master_wa[10]
+wa[11] => datapath:dp.master_wa[11]
+wa[12] => datapath:dp.master_wa[12]
+wa[13] => datapath:dp.master_wa[13]
+wa[14] => datapath:dp.master_wa[14]
+wa[15] => datapath:dp.master_wa[15]
+inst[0] => datapath:dp.master_data[0]
+inst[1] => datapath:dp.master_data[1]
+inst[2] => datapath:dp.master_data[2]
+inst[3] => datapath:dp.master_data[3]
+inst[4] => datapath:dp.master_data[4]
+inst[5] => datapath:dp.master_data[5]
+inst[6] => datapath:dp.master_data[6]
+inst[7] => datapath:dp.master_data[7]
+inst[8] => datapath:dp.master_data[8]
+inst[9] => datapath:dp.master_data[9]
+inst[10] => datapath:dp.master_data[10]
+inst[11] => datapath:dp.master_data[11]
+inst[12] => datapath:dp.master_data[12]
+inst[13] => datapath:dp.master_data[13]
+inst[14] => datapath:dp.master_data[14]
+inst[15] => datapath:dp.master_data[15]
+clk => datapath:dp.clk
+clk => controller:con.clk
+rst => controller:con.rst
+mem_w => datapath:dp.master_wc
+
+
+|iitbproc|datapath:dp
 clk => memory:memory_instance.clk
 clk => ir[0]~reg0.CLK
 clk => ir[1]~reg0.CLK
@@ -52,7 +91,72 @@ clk => tr[13].CLK
 clk => tr[14].CLK
 clk => tr[15].CLK
 clk => RF:rf_instance.clk
-m_we => memory:memory_instance.we
+master_data[0] => m_data[0].DATAB
+master_data[1] => m_data[1].DATAB
+master_data[2] => m_data[2].DATAB
+master_data[3] => m_data[3].DATAB
+master_data[4] => m_data[4].DATAB
+master_data[5] => m_data[5].DATAB
+master_data[6] => m_data[6].DATAB
+master_data[7] => m_data[7].DATAB
+master_data[8] => m_data[8].DATAB
+master_data[9] => m_data[9].DATAB
+master_data[10] => m_data[10].DATAB
+master_data[11] => m_data[11].DATAB
+master_data[12] => m_data[12].DATAB
+master_data[13] => m_data[13].DATAB
+master_data[14] => m_data[14].DATAB
+master_data[15] => m_data[15].DATAB
+master_wa[0] => m_write[0].DATAB
+master_wa[1] => m_write[1].DATAB
+master_wa[2] => m_write[2].DATAB
+master_wa[3] => m_write[3].DATAB
+master_wa[4] => m_write[4].DATAB
+master_wa[5] => m_write[5].DATAB
+master_wa[6] => m_write[6].DATAB
+master_wa[7] => m_write[7].DATAB
+master_wa[8] => m_write[8].DATAB
+master_wa[9] => m_write[9].DATAB
+master_wa[10] => m_write[10].DATAB
+master_wa[11] => m_write[11].DATAB
+master_wa[12] => m_write[12].DATAB
+master_wa[13] => m_write[13].DATAB
+master_wa[14] => m_write[14].DATAB
+master_wa[15] => m_write[15].DATAB
+master_wc => mem_we.IN0
+master_wc => m_data[15].OUTPUTSELECT
+master_wc => m_data[14].OUTPUTSELECT
+master_wc => m_data[13].OUTPUTSELECT
+master_wc => m_data[12].OUTPUTSELECT
+master_wc => m_data[11].OUTPUTSELECT
+master_wc => m_data[10].OUTPUTSELECT
+master_wc => m_data[9].OUTPUTSELECT
+master_wc => m_data[8].OUTPUTSELECT
+master_wc => m_data[7].OUTPUTSELECT
+master_wc => m_data[6].OUTPUTSELECT
+master_wc => m_data[5].OUTPUTSELECT
+master_wc => m_data[4].OUTPUTSELECT
+master_wc => m_data[3].OUTPUTSELECT
+master_wc => m_data[2].OUTPUTSELECT
+master_wc => m_data[1].OUTPUTSELECT
+master_wc => m_data[0].OUTPUTSELECT
+master_wc => m_write[15].OUTPUTSELECT
+master_wc => m_write[14].OUTPUTSELECT
+master_wc => m_write[13].OUTPUTSELECT
+master_wc => m_write[12].OUTPUTSELECT
+master_wc => m_write[11].OUTPUTSELECT
+master_wc => m_write[10].OUTPUTSELECT
+master_wc => m_write[9].OUTPUTSELECT
+master_wc => m_write[8].OUTPUTSELECT
+master_wc => m_write[7].OUTPUTSELECT
+master_wc => m_write[6].OUTPUTSELECT
+master_wc => m_write[5].OUTPUTSELECT
+master_wc => m_write[4].OUTPUTSELECT
+master_wc => m_write[3].OUTPUTSELECT
+master_wc => m_write[2].OUTPUTSELECT
+master_wc => m_write[1].OUTPUTSELECT
+master_wc => m_write[0].OUTPUTSELECT
+m_we => mem_we.IN1
 m_rac => m_read[15].OUTPUTSELECT
 m_rac => m_read[14].OUTPUTSELECT
 m_rac => m_read[13].OUTPUTSELECT
@@ -69,22 +173,22 @@ m_rac => m_read[3].OUTPUTSELECT
 m_rac => m_read[2].OUTPUTSELECT
 m_rac => m_read[1].OUTPUTSELECT
 m_rac => m_read[0].OUTPUTSELECT
-m_wac => m_write[15].OUTPUTSELECT
-m_wac => m_write[14].OUTPUTSELECT
-m_wac => m_write[13].OUTPUTSELECT
-m_wac => m_write[12].OUTPUTSELECT
-m_wac => m_write[11].OUTPUTSELECT
-m_wac => m_write[10].OUTPUTSELECT
-m_wac => m_write[9].OUTPUTSELECT
-m_wac => m_write[8].OUTPUTSELECT
-m_wac => m_write[7].OUTPUTSELECT
-m_wac => m_write[6].OUTPUTSELECT
-m_wac => m_write[5].OUTPUTSELECT
-m_wac => m_write[4].OUTPUTSELECT
-m_wac => m_write[3].OUTPUTSELECT
-m_wac => m_write[2].OUTPUTSELECT
-m_wac => m_write[1].OUTPUTSELECT
-m_wac => m_write[0].OUTPUTSELECT
+m_wac => m_write.OUTPUTSELECT
+m_wac => m_write.OUTPUTSELECT
+m_wac => m_write.OUTPUTSELECT
+m_wac => m_write.OUTPUTSELECT
+m_wac => m_write.OUTPUTSELECT
+m_wac => m_write.OUTPUTSELECT
+m_wac => m_write.OUTPUTSELECT
+m_wac => m_write.OUTPUTSELECT
+m_wac => m_write.OUTPUTSELECT
+m_wac => m_write.OUTPUTSELECT
+m_wac => m_write.OUTPUTSELECT
+m_wac => m_write.OUTPUTSELECT
+m_wac => m_write.OUTPUTSELECT
+m_wac => m_write.OUTPUTSELECT
+m_wac => m_write.OUTPUTSELECT
+m_wac => m_write.OUTPUTSELECT
 upd_ir => ir[1]~reg0.ENA
 upd_ir => ir[0]~reg0.ENA
 upd_ir => ir[2]~reg0.ENA
@@ -188,28 +292,28 @@ rf_master[1] => rf_w.DATAA
 rf_master[2] => rf_r1[2].DATAB
 rf_master[2] => rf_w.DATAA
 zc => z_combine.OUTPUTSELECT
-ir[0] << ir[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ir[1] << ir[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ir[2] << ir[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ir[3] << ir[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ir[4] << ir[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ir[5] << ir[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ir[6] << ir[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ir[7] << ir[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ir[8] << ir[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ir[9] << ir[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ir[10] << ir[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ir[11] << ir[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ir[12] << ir[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ir[13] << ir[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ir[14] << ir[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ir[15] << ir[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-c << c~reg0.DB_MAX_OUTPUT_PORT_TYPE
-z << z~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ir[0] <= ir[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ir[1] <= ir[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ir[2] <= ir[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ir[3] <= ir[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ir[4] <= ir[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ir[5] <= ir[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ir[6] <= ir[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ir[7] <= ir[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ir[8] <= ir[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ir[9] <= ir[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ir[10] <= ir[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ir[11] <= ir[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ir[12] <= ir[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ir[13] <= ir[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ir[14] <= ir[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ir[15] <= ir[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c <= c~reg0.DB_MAX_OUTPUT_PORT_TYPE
+z <= z~reg0.DB_MAX_OUTPUT_PORT_TYPE
 z_imm <= z_imm~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance
+|iitbproc|datapath:dp|ALU:alu_instance
 a[0] => adder:add.a[0]
 a[0] => nand16:logic.a[0]
 a[1] => adder:add.a[1]
@@ -311,7 +415,7 @@ cout <= adder:add.cout
 zero <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add
 a[0] => g_1[0].IN0
 a[0] => p_0[0].IN0
 a[1] => g_0[1].IN0
@@ -412,7 +516,7 @@ sum[15] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl1:15:GP1
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:15:GP1
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -422,7 +526,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl1:14:GP1
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:14:GP1
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -432,7 +536,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl1:13:GP1
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:13:GP1
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -442,7 +546,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl1:12:GP1
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:12:GP1
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -452,7 +556,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl1:11:GP1
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:11:GP1
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -462,7 +566,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl1:10:GP1
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:10:GP1
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -472,7 +576,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl1:9:GP1
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:9:GP1
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -482,7 +586,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl1:8:GP1
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:8:GP1
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -492,7 +596,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl1:7:GP1
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:7:GP1
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -502,7 +606,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl1:6:GP1
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:6:GP1
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -512,7 +616,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl1:5:GP1
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:5:GP1
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -522,7 +626,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl1:4:GP1
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:4:GP1
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -532,7 +636,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl1:3:GP1
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:3:GP1
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -542,7 +646,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl1:2:GP1
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:2:GP1
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -552,7 +656,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl1:1:GP1
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:1:GP1
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -562,7 +666,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl2:15:GP2
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:15:GP2
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -572,7 +676,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl2:14:GP2
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:14:GP2
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -582,7 +686,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl2:13:GP2
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:13:GP2
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -592,7 +696,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl2:12:GP2
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:12:GP2
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -602,7 +706,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl2:11:GP2
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:11:GP2
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -612,7 +716,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl2:10:GP2
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:10:GP2
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -622,7 +726,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl2:9:GP2
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:9:GP2
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -632,7 +736,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl2:8:GP2
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:8:GP2
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -642,7 +746,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl2:7:GP2
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:7:GP2
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -652,7 +756,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl2:6:GP2
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:6:GP2
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -662,7 +766,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl2:5:GP2
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:5:GP2
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -672,7 +776,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl2:4:GP2
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:4:GP2
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -682,7 +786,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl2:3:GP2
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:3:GP2
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -692,7 +796,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl2:2:GP2
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:2:GP2
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -702,7 +806,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl3:15:GP3
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl3:15:GP3
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -712,7 +816,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl3:14:GP3
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl3:14:GP3
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -722,7 +826,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl3:13:GP3
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl3:13:GP3
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -732,7 +836,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl3:12:GP3
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl3:12:GP3
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -742,7 +846,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl3:11:GP3
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl3:11:GP3
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -752,7 +856,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl3:10:GP3
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl3:10:GP3
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -762,7 +866,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl3:9:GP3
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl3:9:GP3
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -772,7 +876,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl3:8:GP3
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl3:8:GP3
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -782,7 +886,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl3:7:GP3
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl3:7:GP3
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -792,7 +896,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl3:6:GP3
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl3:6:GP3
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -802,7 +906,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl3:5:GP3
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl3:5:GP3
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -812,7 +916,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl3:4:GP3
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl3:4:GP3
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -822,7 +926,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl4:15:GP4
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl4:15:GP4
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -832,7 +936,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl4:14:GP4
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl4:14:GP4
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -842,7 +946,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl4:13:GP4
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl4:13:GP4
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -852,7 +956,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl4:12:GP4
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl4:12:GP4
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -862,7 +966,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl4:11:GP4
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl4:11:GP4
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -872,7 +976,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl4:10:GP4
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl4:10:GP4
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -882,7 +986,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl4:9:GP4
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl4:9:GP4
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -892,7 +996,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|adder:add|adder_prop:\lvl4:8:GP4
+|iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl4:8:GP4
 G1 => G.IN1
 P1 => p0.IN0
 P1 => P.IN0
@@ -902,7 +1006,7 @@ G <= G.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ALU:alu_instance|nand16:logic
+|iitbproc|datapath:dp|ALU:alu_instance|nand16:logic
 a[0] => o.IN0
 a[1] => o.IN0
 a[2] => o.IN0
@@ -953,7 +1057,7 @@ o[14] <= o.DB_MAX_OUTPUT_PORT_TYPE
 o[15] <= o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|memory:memory_instance
+|iitbproc|datapath:dp|memory:memory_instance
 clk => ram~32.CLK
 clk => ram~0.CLK
 clk => ram~1.CLK
@@ -1104,7 +1208,7 @@ o[14] <= o[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 o[15] <= o[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|RF:rf_instance
+|iitbproc|datapath:dp|RF:rf_instance
 clk => regfile~19.CLK
 clk => regfile~0.CLK
 clk => regfile~1.CLK
@@ -1204,5 +1308,156 @@ o2[12] <= regfile.PORTBDATAOUT12
 o2[13] <= regfile.PORTBDATAOUT13
 o2[14] <= regfile.PORTBDATAOUT14
 o2[15] <= regfile.PORTBDATAOUT15
+
+
+|iitbproc|controller:con
+clk => rf_master[0]~reg0.CLK
+clk => rf_master[1]~reg0.CLK
+clk => rf_master[2]~reg0.CLK
+clk => state[0].CLK
+clk => state[1].CLK
+clk => state[2].CLK
+clk => state[3].CLK
+clk => zc~reg0.CLK
+clk => rf_dc[0]~reg0.CLK
+clk => rf_dc[1]~reg0.CLK
+clk => rf_wc[0]~reg0.CLK
+clk => rf_wc[1]~reg0.CLK
+clk => rf_rc~reg0.CLK
+clk => rf_we~reg0.CLK
+clk => alu_bc[0]~reg0.CLK
+clk => alu_bc[1]~reg0.CLK
+clk => alu_ac[0]~reg0.CLK
+clk => alu_ac[1]~reg0.CLK
+clk => alu_cin~reg0.CLK
+clk => alu_op~reg0.CLK
+clk => upd_z~reg0.CLK
+clk => upd_c~reg0.CLK
+clk => pc_c~reg0.CLK
+clk => trc~reg0.CLK
+clk => upd_pc~reg0.CLK
+clk => upd_ir~reg0.CLK
+clk => m_wac~reg0.CLK
+clk => m_rac~reg0.CLK
+clk => m_we~reg0.CLK
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => upd_ir.OUTPUTSELECT
+rst => upd_c.OUTPUTSELECT
+rst => upd_z.OUTPUTSELECT
+rst => rf_wc.OUTPUTSELECT
+rst => rf_wc.OUTPUTSELECT
+rst => rf_dc.OUTPUTSELECT
+rst => rf_dc.OUTPUTSELECT
+rst => rf_we.OUTPUTSELECT
+rst => alu_op.OUTPUTSELECT
+rst => alu_bc.OUTPUTSELECT
+rst => alu_bc.OUTPUTSELECT
+rst => alu_ac.OUTPUTSELECT
+rst => alu_ac.OUTPUTSELECT
+rst => upd_pc.OUTPUTSELECT
+rst => m_wac.OUTPUTSELECT
+rst => trc.OUTPUTSELECT
+rst => alu_cin.OUTPUTSELECT
+rst => pc_c.OUTPUTSELECT
+rst => m_rac.OUTPUTSELECT
+rst => zc.OUTPUTSELECT
+rst => m_we.OUTPUTSELECT
+rst => rf_master[2]~reg0.ENA
+rst => rf_master[1]~reg0.ENA
+rst => rf_master[0]~reg0.ENA
+m_we <= m_we~reg0.DB_MAX_OUTPUT_PORT_TYPE
+m_rac <= m_rac~reg0.DB_MAX_OUTPUT_PORT_TYPE
+m_wac <= m_wac~reg0.DB_MAX_OUTPUT_PORT_TYPE
+upd_ir <= upd_ir~reg0.DB_MAX_OUTPUT_PORT_TYPE
+upd_pc <= upd_pc~reg0.DB_MAX_OUTPUT_PORT_TYPE
+trc <= trc~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pc_c <= pc_c~reg0.DB_MAX_OUTPUT_PORT_TYPE
+upd_c <= upd_c~reg0.DB_MAX_OUTPUT_PORT_TYPE
+upd_z <= upd_z~reg0.DB_MAX_OUTPUT_PORT_TYPE
+alu_op <= alu_op~reg0.DB_MAX_OUTPUT_PORT_TYPE
+alu_cin <= alu_cin~reg0.DB_MAX_OUTPUT_PORT_TYPE
+alu_ac[0] <= alu_ac[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+alu_ac[1] <= alu_ac[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+alu_bc[0] <= alu_bc[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+alu_bc[1] <= alu_bc[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rf_we <= rf_we~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rf_rc <= rf_rc~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rf_wc[0] <= rf_wc[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rf_wc[1] <= rf_wc[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rf_dc[0] <= rf_dc[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rf_dc[1] <= rf_dc[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rf_master[0] <= rf_master[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rf_master[1] <= rf_master[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rf_master[2] <= rf_master[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+zc <= zc~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ir[0] => Equal2.IN1
+ir[0] => Equal3.IN0
+ir[0] => Equal4.IN1
+ir[1] => Equal2.IN0
+ir[1] => Equal3.IN1
+ir[1] => Equal4.IN0
+ir[2] => ~NO_FANOUT~
+ir[3] => ~NO_FANOUT~
+ir[4] => ~NO_FANOUT~
+ir[5] => ~NO_FANOUT~
+ir[6] => ~NO_FANOUT~
+ir[7] => ~NO_FANOUT~
+ir[8] => ~NO_FANOUT~
+ir[9] => ~NO_FANOUT~
+ir[10] => ~NO_FANOUT~
+ir[11] => ~NO_FANOUT~
+ir[12] => Equal0.IN3
+ir[12] => Equal1.IN2
+ir[12] => Equal5.IN3
+ir[12] => Equal6.IN3
+ir[12] => Equal7.IN2
+ir[12] => Equal8.IN3
+ir[12] => Equal9.IN1
+ir[12] => Equal10.IN3
+ir[12] => Equal11.IN1
+ir[12] => Equal12.IN2
+ir[12] => Equal13.IN3
+ir[13] => upd_c.DATAB
+ir[13] => Equal0.IN2
+ir[13] => Equal1.IN3
+ir[13] => alu_op.DATAB
+ir[13] => Equal5.IN2
+ir[13] => Equal6.IN2
+ir[13] => Equal7.IN1
+ir[13] => Equal8.IN1
+ir[13] => Equal9.IN3
+ir[13] => Equal10.IN2
+ir[13] => Equal11.IN0
+ir[13] => Equal12.IN1
+ir[13] => Equal13.IN1
+ir[14] => Equal0.IN1
+ir[14] => Equal1.IN1
+ir[14] => Equal5.IN1
+ir[14] => Equal6.IN1
+ir[14] => Equal7.IN3
+ir[14] => Equal8.IN2
+ir[14] => Equal9.IN2
+ir[14] => Equal10.IN1
+ir[14] => Equal11.IN3
+ir[14] => Equal12.IN0
+ir[14] => Equal13.IN0
+ir[15] => Equal0.IN0
+ir[15] => Equal1.IN0
+ir[15] => Equal5.IN0
+ir[15] => Equal6.IN0
+ir[15] => Equal7.IN0
+ir[15] => Equal8.IN0
+ir[15] => Equal9.IN0
+ir[15] => Equal10.IN0
+ir[15] => Equal11.IN2
+ir[15] => Equal12.IN3
+ir[15] => Equal13.IN2
+c => main.IN1
+z => main.IN1
+z_imm => Mux14.IN15
+z_imm => Mux13.IN15
 
 

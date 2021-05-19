@@ -1,0 +1,153 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "m_we",
+					"strict" : false
+				},
+				{
+					"name" : "m_rac",
+					"strict" : false
+				},
+				{
+					"name" : "m_wac",
+					"strict" : false
+				},
+				{
+					"name" : "upd_ir",
+					"strict" : false
+				},
+				{
+					"name" : "upd_pc",
+					"strict" : false
+				},
+				{
+					"name" : "trc",
+					"strict" : false
+				},
+				{
+					"name" : "pc_c",
+					"strict" : false
+				},
+				{
+					"name" : "upd_c",
+					"strict" : false
+				},
+				{
+					"name" : "upd_z",
+					"strict" : false
+				},
+				{
+					"name" : "alu_op",
+					"strict" : false
+				},
+				{
+					"name" : "alu_cin",
+					"strict" : false
+				},
+				{
+					"name" : "alu_ac[0]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_ac[1]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_bc[0]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_bc[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rf_we",
+					"strict" : false
+				},
+				{
+					"name" : "rf_rc",
+					"strict" : false
+				},
+				{
+					"name" : "rf_wc[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rf_wc[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rf_dc[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rf_dc[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rf_master[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rf_master[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rf_master[2]",
+					"strict" : false
+				},
+				{
+					"name" : "zc",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "ir[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ir[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ir[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ir[12]",
+					"strict" : false
+				},
+				{
+					"name" : "c",
+					"strict" : false
+				},
+				{
+					"name" : "z",
+					"strict" : false
+				},
+				{
+					"name" : "ir[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ir[1]",
+					"strict" : false
+				},
+				{
+					"name" : "z_imm",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

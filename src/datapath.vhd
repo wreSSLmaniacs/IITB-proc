@@ -8,6 +8,9 @@ entity datapath is
 	port
 		(
 			clk : in std_logic;
+			-- user control pins
+			master_data, master_wa : in std_logic_vector (15 downto 0);
+			master_wc : in std_logic;
 			
 			-- controls pins
 			m_we, m_rac, m_wac : in std_logic; -- memory controls
@@ -83,13 +86,17 @@ architecture behv of datapath is
 	signal mem0, z_combine : std_logic;
 	
 	signal tr_combine, pc_combine : std_logic_vector(15 downto 0);
+	
+	signal mem_we : std_logic;
 begin
+	
+	mem_we <= master_wc or m_we;
 	
 	alu_instance : ALU
 		port map (a => alu_a, b => alu_b, cin => alu_cin, op => alu_op, o => alu_o, cout => alu_c, zero => alu_z);
 	
 	memory_instance : memory
-		port map (clk => clk, data => m_data, wa => m_write, ra => m_read, we => m_we, o => m_out );
+		port map (clk => clk, data => m_data, wa => m_write, ra => m_read, we => mem_we, o => m_out );
 	
 	rf_instance : RF
 		port map (clk => clk, data => rf_data, wa => rf_w, ra1 => rf_r1, ra2 => rf_r2, we => rf_we, o1 => rf_out1, o2 => rf_out2);
@@ -115,8 +122,9 @@ begin
 		signext9(idx) <= ir(8);
 	end generate;
 	
-	m_data <= rf_out1;
-	m_write <= alu_o when (m_wac = '1') else tr;
+	m_data <= master_data when(master_wc = '1') else rf_out1;
+	m_write <= master_wa when (master_wc = '1') else
+					alu_o when (m_wac = '1') else tr;
 	m_read <= tr when (m_rac = '1') else pc;
 	
 	rf_r1 <= rf_master when (rf_rc = '1') else ir(11 downto 9);

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed May 19 20:41:49 2021
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : controller
+Top-level Entity Name : controller
+Family : Cyclone 10 LP
+Total logic elements : 75
+    Total combinational functions : 74
+    Dedicated logic registers : 29
+Total registers : 29
+Total pins : 46
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

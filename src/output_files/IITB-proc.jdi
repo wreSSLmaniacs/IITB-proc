@@ -1,8 +1,8 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="311f8c1907e6b46179b6"/>
+    <hash md5_digest_80b="f5f35fe9824ffb125509"/>
   </project>
   <file_info>
-    <file device="10CL055YF484C6G" path="IITB-proc.sof" usercode="0xFFFFFFFF"/>
+    <file device="10CL006YE144C6G" path="IITB-proc.sof" usercode="0xFFFFFFFF"/>
   </file_info>
 </sld_project_info>
