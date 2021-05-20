@@ -2,6 +2,7 @@ library work;
 use work.all;
 
 library IEEE;
+use IEEE.numeric_std.all;
 use IEEE.std_logic_1164.all;
 
 entity controller is
@@ -27,7 +28,7 @@ entity controller is
 			-- state inference pins
 			ir : in std_logic_vector(15 downto 0);
 			c,z : in std_logic;
-			z_imm : in std_logic;
+			z_imm : in std_logic
 		);
 end entity;
 
@@ -201,7 +202,7 @@ process(clk, ir, c, z)
 					talu_bc <= "01";
 					trf_master <= std_logic_vector( unsigned(trf_master) + 1);
 					
-					if(trf_master = "111")
+					if(trf_master = "111") then
 						next_state <= s3;
 					end if;
 			
@@ -212,7 +213,7 @@ process(clk, ir, c, z)
 					talu_bc <= "01";
 					trf_master <= std_logic_vector( unsigned(trf_master) + 1);
 					
-					if(trf_master = "111")
+					if(trf_master = "111") then
 						next_state <= s3;
 					end if;
 					
@@ -223,7 +224,7 @@ process(clk, ir, c, z)
 			m_rac <= tm_rac;
 			m_wac <= tm_wac;
 			upd_ir <= tupd_ir;
-			upd_ic <= tupd_pc;
+			upd_pc <= tupd_pc;
 			trc <= ttrc;
 			pc_c <= tpc_c;
 			upd_c <= tupd_c;

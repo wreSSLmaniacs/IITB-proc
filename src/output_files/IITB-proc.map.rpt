@@ -1,6 +1,6 @@
 Analysis & Synthesis report for IITB-proc
-Wed May 19 15:26:13 2021
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Thu May 20 09:08:35 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -49,8 +49,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 19 15:26:13 2021       ;
-; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Thu May 20 09:08:35 2021       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB-proc                                   ;
 ; Top-level Entity Name              ; datapath                                    ;
 ; Family                             ; Cyclone 10 LP                               ;
@@ -156,42 +156,42 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.2%      ;
-;     Processor 4            ;   0.2%      ;
+;     Processor 2            ;   0.4%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; ALU.vhd                          ; yes             ; User VHDL File               ; E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd                                 ;         ;
-; memory.vhd                       ; yes             ; User VHDL File               ; E:/Courses/Spring 2021/IITB-proc/src/memory.vhd                              ;         ;
-; RF.vhd                           ; yes             ; User VHDL File               ; E:/Courses/Spring 2021/IITB-proc/src/RF.vhd                                  ;         ;
-; datapath.vhd                     ; yes             ; User VHDL File               ; E:/Courses/Spring 2021/IITB-proc/src/datapath.vhd                            ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_n9h1.tdf           ; yes             ; Auto-Generated Megafunction  ; E:/Courses/Spring 2021/IITB-proc/src/db/altsyncram_n9h1.tdf                  ;         ;
-; db/decode_ksa.tdf                ; yes             ; Auto-Generated Megafunction  ; E:/Courses/Spring 2021/IITB-proc/src/db/decode_ksa.tdf                       ;         ;
-; db/mux_job.tdf                   ; yes             ; Auto-Generated Megafunction  ; E:/Courses/Spring 2021/IITB-proc/src/db/mux_job.tdf                          ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                              ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
+; controller.vhd                   ; yes             ; User VHDL File               ; /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/controller.vhd                         ;         ;
+; testbench.vhd                    ; yes             ; User VHDL File               ; /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/testbench.vhd                          ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File               ; /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/ALU.vhd                                ;         ;
+; memory.vhd                       ; yes             ; User VHDL File               ; /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/memory.vhd                             ;         ;
+; RF.vhd                           ; yes             ; User VHDL File               ; /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/RF.vhd                                 ;         ;
+; datapath.vhd                     ; yes             ; User VHDL File               ; /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/datapath.vhd                           ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; /home/parallels/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; /home/parallels/intelFPGA_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; /home/parallels/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; /home/parallels/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; /home/parallels/intelFPGA_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; /home/parallels/intelFPGA_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; /home/parallels/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; /home/parallels/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; /home/parallels/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_n9h1.tdf           ; yes             ; Auto-Generated Megafunction  ; /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/db/altsyncram_n9h1.tdf                 ;         ;
+; db/decode_ksa.tdf                ; yes             ; Auto-Generated Megafunction  ; /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/db/decode_ksa.tdf                      ;         ;
+; db/mux_job.tdf                   ; yes             ; Auto-Generated Megafunction  ; /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/db/mux_job.tdf                         ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -311,13 +311,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |datapath|alu_a[0]         ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |datapath|alu_b[8]         ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |datapath|rf_data[2]       ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |datapath|rf_data[10]      ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |datapath|rf_w[0]          ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |datapath|alu_b[7]         ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |datapath|alu_b[1]         ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |datapath|alu_a[15]        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |datapath|alu_b[13]        ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |datapath|rf_data[0]       ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |datapath|rf_data[8]       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |datapath|rf_w[2]          ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |datapath|alu_b[6]         ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |datapath|alu_b[4]         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -439,7 +439,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -448,39 +448,45 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed May 19 15:26:02 2021
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu May 20 09:08:23 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB-proc -c IITB-proc
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 8 design units, including 4 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: adder_prop-behv File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 20
-    Info (12022): Found design unit 2: adder-behv File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 44
-    Info (12022): Found design unit 3: nand16-behv File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 156
-    Info (12022): Found design unit 4: ALU-behv File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 186
-    Info (12023): Found entity 1: adder_prop File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 11
-    Info (12023): Found entity 2: adder File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 34
-    Info (12023): Found entity 3: nand16 File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 148
-    Info (12023): Found entity 4: ALU File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 176
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file controller.vhd
+    Info (12022): Found design unit 1: controller-behv File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/controller.vhd Line: 35
+    Info (12023): Found entity 1: controller File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/controller.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file testbench.vhd
+    Info (12022): Found design unit 1: Testbench-Behave File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/testbench.vhd Line: 9
+    Info (12023): Found entity 1: Testbench File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/testbench.vhd Line: 7
+Info (12021): Found 8 design units, including 4 entities, in source file ALU.vhd
+    Info (12022): Found design unit 1: adder_prop-behv File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/ALU.vhd Line: 20
+    Info (12022): Found design unit 2: adder-behv File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/ALU.vhd Line: 44
+    Info (12022): Found design unit 3: nand16-behv File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/ALU.vhd Line: 156
+    Info (12022): Found design unit 4: ALU-behv File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/ALU.vhd Line: 186
+    Info (12023): Found entity 1: adder_prop File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/ALU.vhd Line: 11
+    Info (12023): Found entity 2: adder File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/ALU.vhd Line: 34
+    Info (12023): Found entity 3: nand16 File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/ALU.vhd Line: 148
+    Info (12023): Found entity 4: ALU File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/ALU.vhd Line: 176
 Info (12021): Found 2 design units, including 1 entities, in source file memory.vhd
-    Info (12022): Found design unit 1: memory-behv File: E:/Courses/Spring 2021/IITB-proc/src/memory.vhd Line: 20
-    Info (12023): Found entity 1: memory File: E:/Courses/Spring 2021/IITB-proc/src/memory.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file rf.vhd
-    Info (12022): Found design unit 1: RF-behv File: E:/Courses/Spring 2021/IITB-proc/src/RF.vhd Line: 20
-    Info (12023): Found entity 1: RF File: E:/Courses/Spring 2021/IITB-proc/src/RF.vhd Line: 8
+    Info (12022): Found design unit 1: memory-behv File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/memory.vhd Line: 20
+    Info (12023): Found entity 1: memory File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/memory.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file RF.vhd
+    Info (12022): Found design unit 1: RF-behv File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/RF.vhd Line: 20
+    Info (12023): Found entity 1: RF File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/RF.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
-    Info (12022): Found design unit 1: datapath-behv File: E:/Courses/Spring 2021/IITB-proc/src/datapath.vhd Line: 33
-    Info (12023): Found entity 1: datapath File: E:/Courses/Spring 2021/IITB-proc/src/datapath.vhd Line: 7
+    Info (12022): Found design unit 1: datapath-behv File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/datapath.vhd Line: 33
+    Info (12023): Found entity 1: datapath File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/datapath.vhd Line: 7
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu_instance" File: E:/Courses/Spring 2021/IITB-proc/src/datapath.vhd Line: 88
-Info (12128): Elaborating entity "adder" for hierarchy "ALU:alu_instance|adder:add" File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 208
-Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(54): object "bx" assigned a value but never read File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 54
-Info (12128): Elaborating entity "adder_prop" for hierarchy "ALU:alu_instance|adder:add|adder_prop:\lvl1:15:GP1" File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 84
-Info (12128): Elaborating entity "nand16" for hierarchy "ALU:alu_instance|nand16:logic" File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 210
-Info (12128): Elaborating entity "memory" for hierarchy "memory:memory_instance" File: E:/Courses/Spring 2021/IITB-proc/src/datapath.vhd Line: 91
-Info (12128): Elaborating entity "RF" for hierarchy "RF:rf_instance" File: E:/Courses/Spring 2021/IITB-proc/src/datapath.vhd Line: 94
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu_instance" File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/datapath.vhd Line: 88
+Info (12128): Elaborating entity "adder" for hierarchy "ALU:alu_instance|adder:add" File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/ALU.vhd Line: 208
+Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(54): object "bx" assigned a value but never read File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/ALU.vhd Line: 54
+Info (12128): Elaborating entity "adder_prop" for hierarchy "ALU:alu_instance|adder:add|adder_prop:\lvl1:15:GP1" File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/ALU.vhd Line: 84
+Info (12128): Elaborating entity "nand16" for hierarchy "ALU:alu_instance|nand16:logic" File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/ALU.vhd Line: 210
+Info (12128): Elaborating entity "memory" for hierarchy "memory:memory_instance" File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/datapath.vhd Line: 91
+Info (12128): Elaborating entity "RF" for hierarchy "RF:rf_instance" File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/datapath.vhd Line: 94
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "RF:rf_instance|regfile" is uninferred due to inappropriate RAM size File: E:/Courses/Spring 2021/IITB-proc/src/RF.vhd Line: 22
+    Info (276004): RAM logic "RF:rf_instance|regfile" is uninferred due to inappropriate RAM size File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/RF.vhd Line: 22
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "memory:memory_instance|ram_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -516,11 +522,11 @@ Info (12133): Instantiated megafunction "memory:memory_instance|altsyncram:ram_r
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_n9h1.tdf
-    Info (12023): Found entity 1: altsyncram_n9h1 File: E:/Courses/Spring 2021/IITB-proc/src/db/altsyncram_n9h1.tdf Line: 32
+    Info (12023): Found entity 1: altsyncram_n9h1 File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/db/altsyncram_n9h1.tdf Line: 32
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_ksa.tdf
-    Info (12023): Found entity 1: decode_ksa File: E:/Courses/Spring 2021/IITB-proc/src/db/decode_ksa.tdf Line: 23
+    Info (12023): Found entity 1: decode_ksa File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/db/decode_ksa.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_job.tdf
-    Info (12023): Found entity 1: mux_job File: E:/Courses/Spring 2021/IITB-proc/src/db/mux_job.tdf Line: 23
+    Info (12023): Found entity 1: mux_job File: /media/psf/4th-sem/dld-cs226/project/IITB-proc/src/db/mux_job.tdf Line: 23
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -530,9 +536,9 @@ Info (21057): Implemented 887 device resources after synthesis - the final resou
     Info (21061): Implemented 714 logic cells
     Info (21064): Implemented 128 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4812 megabytes
-    Info: Processing ended: Wed May 19 15:26:13 2021
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Peak virtual memory: 448 megabytes
+    Info: Processing ended: Thu May 20 09:08:35 2021
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:15
 
 
