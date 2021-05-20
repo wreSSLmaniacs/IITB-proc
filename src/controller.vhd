@@ -38,8 +38,7 @@ architecture behv of controller is
 	signal state : state_labels := 0;
 	signal next_state : state_labels;
 begin
-
-main : process(clk)
+p1 : process(state, ir)
 begin
 	m_we <= '0';
 	m_rac <= '0';
@@ -198,30 +197,33 @@ begin
 			next_state <= 3;
 			
 		when others => null;
-		end case;
+	end case;
+end process;
 
-		if rising_edge(clk) then
-			if (rst = '1') then
-				state <= 0;
-			else
-				case state is
-					when 7 =>
-						if( rf_master = "111" ) then
-							rf_master <= "000";
-							state <= 3;
-						else
-							rf_master <= std_logic_vector( unsigned(rf_master) + 1);
-						end if;
-						
-					when 9 => 
+p2 : process(clk)
+begin
+	if rising_edge(clk) then
+		if (rst = '1') then
+			state <= 0;
+		else
+			case state is
+				when 7 =>
+					if( rf_master = "111" ) then
+						rf_master <= "000";
+						state <= 3;
+					else
 						rf_master <= std_logic_vector( unsigned(rf_master) + 1);
-						if( rf_master = "110" ) then
-							state <= 10;
-						end if;
-					when others => 
-						state <= next_state;
-				end case;
-			end if;
+					end if;
+					
+				when 9 => 
+					rf_master <= std_logic_vector( unsigned(rf_master) + 1);
+					if( rf_master = "110" ) then
+						state <= 10;
+					end if;
+				when others => 
+					state <= next_state;
+			end case;
 		end if;
-	end process;
+	end if;
+end process;
 end architecture;

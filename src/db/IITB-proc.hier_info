@@ -1411,8 +1411,8 @@ ir[15] => Equal10.IN0
 ir[15] => Equal11.IN2
 ir[15] => Equal12.IN3
 ir[15] => Equal13.IN2
-c => main.IN1
-z => main.IN1
+c => p1.IN1
+z => p1.IN1
 z_imm => Mux9.IN15
 z_imm => Mux10.IN15
 

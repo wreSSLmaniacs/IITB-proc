@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IITB-proc
-Thu May 20 20:00:26 2021
+Thu May 20 21:02:52 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -9,13 +9,14 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
-  4. Analysis & Synthesis Source Files Read
-  5. Analysis & Synthesis Resource Usage Summary
-  6. Analysis & Synthesis Resource Utilization by Entity
-  7. General Register Statistics
-  8. Post-Synthesis Netlist Statistics for Top Partition
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -42,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 20 20:00:26 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 20 21:02:52 2021       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB-proc                                   ;
 ; Top-level Entity Name              ; iitbproc                                    ;
@@ -144,19 +145,36 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                            ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                     ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
-; controller.vhd                   ; yes             ; User VHDL File  ; /home/anon/Desktop/IITB-proc/src/controller.vhd  ;         ;
-; ALU.vhd                          ; yes             ; User VHDL File  ; /home/anon/Desktop/IITB-proc/src/ALU.vhd         ;         ;
-; memory.vhd                       ; yes             ; User VHDL File  ; /home/anon/Desktop/IITB-proc/src/memory.vhd      ;         ;
-; RF.vhd                           ; yes             ; User VHDL File  ; /home/anon/Desktop/IITB-proc/src/RF.vhd          ;         ;
-; datapath.vhd                     ; yes             ; User VHDL File  ; /home/anon/Desktop/IITB-proc/src/datapath.vhd    ;         ;
-; iitbproc.vhd                     ; yes             ; User VHDL File  ; /home/anon/Desktop/IITB-proc/src/iitbproc.vhd    ;         ;
-; iitbproc-tb.vhd                  ; yes             ; User VHDL File  ; /home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                         ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
+; controller.vhd                   ; yes             ; User VHDL File  ; E:/Courses/Spring 2021/IITB-proc/src/controller.vhd  ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File  ; E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd         ;         ;
+; memory.vhd                       ; yes             ; User VHDL File  ; E:/Courses/Spring 2021/IITB-proc/src/memory.vhd      ;         ;
+; RF.vhd                           ; yes             ; User VHDL File  ; E:/Courses/Spring 2021/IITB-proc/src/RF.vhd          ;         ;
+; datapath.vhd                     ; yes             ; User VHDL File  ; E:/Courses/Spring 2021/IITB-proc/src/datapath.vhd    ;         ;
+; iitbproc.vhd                     ; yes             ; User VHDL File  ; E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd    ;         ;
+; iitbproc-tb.vhd                  ; yes             ; User VHDL File  ; E:/Courses/Spring 2021/IITB-proc/src/iitbproc-tb.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -242,115 +260,99 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu May 20 19:59:46 2021
+    Info: Processing started: Thu May 20 21:02:41 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB-proc -c IITB-proc
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20029): Only one processor detected - disabling parallel compilation
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file controller.vhd
-    Info (12022): Found design unit 1: controller-behv File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 36
-    Info (12023): Found entity 1: controller File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 8
-Info (12021): Found 8 design units, including 4 entities, in source file ALU.vhd
-    Info (12022): Found design unit 1: adder_prop-behv File: /home/anon/Desktop/IITB-proc/src/ALU.vhd Line: 20
-    Info (12022): Found design unit 2: adder-behv File: /home/anon/Desktop/IITB-proc/src/ALU.vhd Line: 44
-    Info (12022): Found design unit 3: nand16-behv File: /home/anon/Desktop/IITB-proc/src/ALU.vhd Line: 156
-    Info (12022): Found design unit 4: ALU-behv File: /home/anon/Desktop/IITB-proc/src/ALU.vhd Line: 186
-    Info (12023): Found entity 1: adder_prop File: /home/anon/Desktop/IITB-proc/src/ALU.vhd Line: 11
-    Info (12023): Found entity 2: adder File: /home/anon/Desktop/IITB-proc/src/ALU.vhd Line: 34
-    Info (12023): Found entity 3: nand16 File: /home/anon/Desktop/IITB-proc/src/ALU.vhd Line: 148
-    Info (12023): Found entity 4: ALU File: /home/anon/Desktop/IITB-proc/src/ALU.vhd Line: 176
+    Info (12022): Found design unit 1: controller-behv File: E:/Courses/Spring 2021/IITB-proc/src/controller.vhd Line: 36
+    Info (12023): Found entity 1: controller File: E:/Courses/Spring 2021/IITB-proc/src/controller.vhd Line: 8
+Info (12021): Found 8 design units, including 4 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: adder_prop-behv File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 20
+    Info (12022): Found design unit 2: adder-behv File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 44
+    Info (12022): Found design unit 3: nand16-behv File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 156
+    Info (12022): Found design unit 4: ALU-behv File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 186
+    Info (12023): Found entity 1: adder_prop File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 11
+    Info (12023): Found entity 2: adder File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 34
+    Info (12023): Found entity 3: nand16 File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 148
+    Info (12023): Found entity 4: ALU File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 176
 Info (12021): Found 2 design units, including 1 entities, in source file memory.vhd
-    Info (12022): Found design unit 1: memory-behv File: /home/anon/Desktop/IITB-proc/src/memory.vhd Line: 20
-    Info (12023): Found entity 1: memory File: /home/anon/Desktop/IITB-proc/src/memory.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file RF.vhd
-    Info (12022): Found design unit 1: RF-behv File: /home/anon/Desktop/IITB-proc/src/RF.vhd Line: 20
-    Info (12023): Found entity 1: RF File: /home/anon/Desktop/IITB-proc/src/RF.vhd Line: 8
+    Info (12022): Found design unit 1: memory-behv File: E:/Courses/Spring 2021/IITB-proc/src/memory.vhd Line: 20
+    Info (12023): Found entity 1: memory File: E:/Courses/Spring 2021/IITB-proc/src/memory.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file rf.vhd
+    Info (12022): Found design unit 1: RF-behv File: E:/Courses/Spring 2021/IITB-proc/src/RF.vhd Line: 20
+    Info (12023): Found entity 1: RF File: E:/Courses/Spring 2021/IITB-proc/src/RF.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
-    Info (12022): Found design unit 1: datapath-behv File: /home/anon/Desktop/IITB-proc/src/datapath.vhd Line: 36
-    Info (12023): Found entity 1: datapath File: /home/anon/Desktop/IITB-proc/src/datapath.vhd Line: 7
+    Info (12022): Found design unit 1: datapath-behv File: E:/Courses/Spring 2021/IITB-proc/src/datapath.vhd Line: 36
+    Info (12023): Found entity 1: datapath File: E:/Courses/Spring 2021/IITB-proc/src/datapath.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file iitbproc.vhd
-    Info (12022): Found design unit 1: iitbproc-behv File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 17
-    Info (12023): Found entity 1: iitbproc File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 7
+    Info (12022): Found design unit 1: iitbproc-behv File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 17
+    Info (12023): Found entity 1: iitbproc File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file iitbproc-tb.vhd
-    Info (12022): Found design unit 1: cputest-behv File: /home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd Line: 13
-    Info (12023): Found entity 1: cputest File: /home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd Line: 10
+    Info (12022): Found design unit 1: cputest-behv File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc-tb.vhd Line: 13
+    Info (12023): Found entity 1: cputest File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc-tb.vhd Line: 10
 Info (12127): Elaborating entity "iitbproc" for the top level hierarchy
-Info (12128): Elaborating entity "datapath" for hierarchy "datapath:dp" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 88
-Info (12128): Elaborating entity "ALU" for hierarchy "datapath:dp|ALU:alu_instance" File: /home/anon/Desktop/IITB-proc/src/datapath.vhd Line: 95
-Info (12128): Elaborating entity "adder" for hierarchy "datapath:dp|ALU:alu_instance|adder:add" File: /home/anon/Desktop/IITB-proc/src/ALU.vhd Line: 208
-Info (12128): Elaborating entity "adder_prop" for hierarchy "datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:15:GP1" File: /home/anon/Desktop/IITB-proc/src/ALU.vhd Line: 84
-Info (12128): Elaborating entity "nand16" for hierarchy "datapath:dp|ALU:alu_instance|nand16:logic" File: /home/anon/Desktop/IITB-proc/src/ALU.vhd Line: 210
-Info (12128): Elaborating entity "memory" for hierarchy "datapath:dp|memory:memory_instance" File: /home/anon/Desktop/IITB-proc/src/datapath.vhd Line: 98
-Info (12128): Elaborating entity "RF" for hierarchy "datapath:dp|RF:rf_instance" File: /home/anon/Desktop/IITB-proc/src/datapath.vhd Line: 101
-Info (12128): Elaborating entity "controller" for hierarchy "controller:con" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 90
-Warning (10492): VHDL Process Statement warning at controller.vhd(63): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 63
-Warning (10492): VHDL Process Statement warning at controller.vhd(74): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 74
-Warning (10492): VHDL Process Statement warning at controller.vhd(75): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 75
-Warning (10492): VHDL Process Statement warning at controller.vhd(76): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 76
-Warning (10492): VHDL Process Statement warning at controller.vhd(76): signal "c" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 76
-Warning (10492): VHDL Process Statement warning at controller.vhd(77): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 77
-Warning (10492): VHDL Process Statement warning at controller.vhd(77): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 77
-Warning (10492): VHDL Process Statement warning at controller.vhd(79): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 79
-Warning (10492): VHDL Process Statement warning at controller.vhd(84): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 84
-Warning (10492): VHDL Process Statement warning at controller.vhd(87): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 87
-Warning (10492): VHDL Process Statement warning at controller.vhd(96): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 96
-Warning (10492): VHDL Process Statement warning at controller.vhd(104): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 104
-Warning (10492): VHDL Process Statement warning at controller.vhd(108): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 108
-Warning (10492): VHDL Process Statement warning at controller.vhd(114): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 114
-Warning (10492): VHDL Process Statement warning at controller.vhd(118): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 118
-Warning (10492): VHDL Process Statement warning at controller.vhd(122): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 122
-Warning (10492): VHDL Process Statement warning at controller.vhd(126): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 126
-Warning (10492): VHDL Process Statement warning at controller.vhd(134): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 134
-Warning (10492): VHDL Process Statement warning at controller.vhd(167): signal "z_imm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 167
-Warning (10631): VHDL Process Statement warning at controller.vhd(42): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 42
-Info (10041): Inferred latch for "next_state[0]" at controller.vhd(42) File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 42
-Info (10041): Inferred latch for "next_state[1]" at controller.vhd(42) File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 42
-Info (10041): Inferred latch for "next_state[2]" at controller.vhd(42) File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 42
-Info (10041): Inferred latch for "next_state[3]" at controller.vhd(42) File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 42
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:dp" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 88
+Info (12128): Elaborating entity "ALU" for hierarchy "datapath:dp|ALU:alu_instance" File: E:/Courses/Spring 2021/IITB-proc/src/datapath.vhd Line: 95
+Info (12128): Elaborating entity "adder" for hierarchy "datapath:dp|ALU:alu_instance|adder:add" File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 208
+Info (12128): Elaborating entity "adder_prop" for hierarchy "datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:15:GP1" File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 84
+Info (12128): Elaborating entity "nand16" for hierarchy "datapath:dp|ALU:alu_instance|nand16:logic" File: E:/Courses/Spring 2021/IITB-proc/src/ALU.vhd Line: 210
+Info (12128): Elaborating entity "memory" for hierarchy "datapath:dp|memory:memory_instance" File: E:/Courses/Spring 2021/IITB-proc/src/datapath.vhd Line: 98
+Info (12128): Elaborating entity "RF" for hierarchy "datapath:dp|RF:rf_instance" File: E:/Courses/Spring 2021/IITB-proc/src/datapath.vhd Line: 101
+Info (12128): Elaborating entity "controller" for hierarchy "controller:con" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 90
+Warning (10492): VHDL Process Statement warning at controller.vhd(75): signal "c" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Courses/Spring 2021/IITB-proc/src/controller.vhd Line: 75
+Warning (10492): VHDL Process Statement warning at controller.vhd(76): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Courses/Spring 2021/IITB-proc/src/controller.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at controller.vhd(166): signal "z_imm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Courses/Spring 2021/IITB-proc/src/controller.vhd Line: 166
+Warning (10631): VHDL Process Statement warning at controller.vhd(41): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process File: E:/Courses/Spring 2021/IITB-proc/src/controller.vhd Line: 41
+Info (10041): Inferred latch for "next_state[0]" at controller.vhd(41) File: E:/Courses/Spring 2021/IITB-proc/src/controller.vhd Line: 41
+Info (10041): Inferred latch for "next_state[1]" at controller.vhd(41) File: E:/Courses/Spring 2021/IITB-proc/src/controller.vhd Line: 41
+Info (10041): Inferred latch for "next_state[2]" at controller.vhd(41) File: E:/Courses/Spring 2021/IITB-proc/src/controller.vhd Line: 41
+Info (10041): Inferred latch for "next_state[3]" at controller.vhd(41) File: E:/Courses/Spring 2021/IITB-proc/src/controller.vhd Line: 41
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 35 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "wa[0]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "wa[1]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "wa[2]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "wa[3]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "wa[4]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "wa[5]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "wa[6]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "wa[7]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "wa[8]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "wa[9]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "wa[10]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "wa[11]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "wa[12]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "wa[13]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "wa[14]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "wa[15]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "inst[0]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "inst[1]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "inst[2]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "inst[3]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "inst[4]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "inst[5]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "inst[6]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "inst[7]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "inst[8]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "inst[9]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "inst[10]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "inst[11]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "inst[12]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "inst[13]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "inst[14]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "inst[15]" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 10
-    Warning (15610): No output dependent on input pin "clk" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 11
-    Warning (15610): No output dependent on input pin "rst" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 12
-    Warning (15610): No output dependent on input pin "mem_w" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 13
+    Warning (15610): No output dependent on input pin "wa[0]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "wa[1]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "wa[2]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "wa[3]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "wa[4]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "wa[5]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "wa[6]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "wa[7]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "wa[8]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "wa[9]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "wa[10]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "wa[11]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "wa[12]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "wa[13]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "wa[14]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "wa[15]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "inst[0]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "inst[1]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "inst[2]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "inst[3]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "inst[4]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "inst[5]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "inst[6]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "inst[7]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "inst[8]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "inst[9]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "inst[10]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "inst[11]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "inst[12]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "inst[13]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "inst[14]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "inst[15]" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 10
+    Warning (15610): No output dependent on input pin "clk" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 11
+    Warning (15610): No output dependent on input pin "rst" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 12
+    Warning (15610): No output dependent on input pin "mem_w" File: E:/Courses/Spring 2021/IITB-proc/src/iitbproc.vhd Line: 13
 Info (21057): Implemented 35 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 35 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 57 warnings
-    Info: Peak virtual memory: 419 megabytes
-    Info: Processing ended: Thu May 20 20:00:26 2021
-    Info: Elapsed time: 00:00:40
-    Info: Total CPU time (on all processors): 00:00:34
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 4785 megabytes
+    Info: Processing ended: Thu May 20 21:02:52 2021
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:20
 
 
