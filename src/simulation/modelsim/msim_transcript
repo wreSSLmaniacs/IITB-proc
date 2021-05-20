@@ -11,7 +11,7 @@
 # 
 # vcom -93 -work work {/home/anon/Desktop/IITB-proc/src/controller.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:02:07 on May 20,2021
+# Start time: 20:00:59 on May 20,2021
 # vcom -reportprogress 300 -93 -work work /home/anon/Desktop/IITB-proc/src/controller.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -19,11 +19,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity controller
 # -- Compiling architecture behv of controller
-# End time: 18:02:07 on May 20,2021, Elapsed time: 0:00:00
+# End time: 20:00:59 on May 20,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/anon/Desktop/IITB-proc/src/ALU.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:02:08 on May 20,2021
+# Start time: 20:00:59 on May 20,2021
 # vcom -reportprogress 300 -93 -work work /home/anon/Desktop/IITB-proc/src/ALU.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -36,11 +36,11 @@
 # -- Compiling architecture behv of nand16
 # -- Compiling entity ALU
 # -- Compiling architecture behv of ALU
-# End time: 18:02:08 on May 20,2021, Elapsed time: 0:00:00
+# End time: 20:01:00 on May 20,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/anon/Desktop/IITB-proc/src/memory.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:02:08 on May 20,2021
+# Start time: 20:01:00 on May 20,2021
 # vcom -reportprogress 300 -93 -work work /home/anon/Desktop/IITB-proc/src/memory.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -48,11 +48,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity memory
 # -- Compiling architecture behv of memory
-# End time: 18:02:08 on May 20,2021, Elapsed time: 0:00:00
+# End time: 20:01:00 on May 20,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/anon/Desktop/IITB-proc/src/RF.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:02:08 on May 20,2021
+# Start time: 20:01:00 on May 20,2021
 # vcom -reportprogress 300 -93 -work work /home/anon/Desktop/IITB-proc/src/RF.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -60,33 +60,33 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RF
 # -- Compiling architecture behv of RF
-# End time: 18:02:08 on May 20,2021, Elapsed time: 0:00:00
+# End time: 20:01:00 on May 20,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/anon/Desktop/IITB-proc/src/datapath.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:02:08 on May 20,2021
+# Start time: 20:01:00 on May 20,2021
 # vcom -reportprogress 300 -93 -work work /home/anon/Desktop/IITB-proc/src/datapath.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity datapath
 # -- Compiling architecture behv of datapath
-# End time: 18:02:08 on May 20,2021, Elapsed time: 0:00:00
+# End time: 20:01:01 on May 20,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/anon/Desktop/IITB-proc/src/iitbproc.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:02:08 on May 20,2021
+# Start time: 20:01:01 on May 20,2021
 # vcom -reportprogress 300 -93 -work work /home/anon/Desktop/IITB-proc/src/iitbproc.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity iitbproc
 # -- Compiling architecture behv of iitbproc
-# End time: 18:02:09 on May 20,2021, Elapsed time: 0:00:01
+# End time: 20:01:01 on May 20,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:02:09 on May 20,2021
+# Start time: 20:01:01 on May 20,2021
 # vcom -reportprogress 300 -93 -work work /home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -95,12 +95,12 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity cputest
 # -- Compiling architecture behv of cputest
-# End time: 18:02:09 on May 20,2021, Elapsed time: 0:00:00
+# End time: 20:01:01 on May 20,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {/home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:02:10 on May 20,2021
+# Start time: 20:01:01 on May 20,2021
 # vcom -reportprogress 300 -93 -work work /home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -109,12 +109,12 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity cputest
 # -- Compiling architecture behv of cputest
-# End time: 18:02:10 on May 20,2021, Elapsed time: 0:00:00
+# End time: 20:01:01 on May 20,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp -L rtl_work -L work -voptargs="+acc"  cputest
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp -L rtl_work -L work -voptargs=""+acc"" cputest 
-# Start time: 18:02:10 on May 20,2021
+# Start time: 20:01:01 on May 20,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -132,6 +132,16 @@
 # Loading work.controller(behv)
 # 
 # add wave *
+# Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: anon  Hostname: anon-VirtualBox  ProcessID: 3475
+#           Attempting to use alternate WLF file "./wlft8cCQgH".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft8cCQgH
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -143,3 +153,14 @@
 #    Time: 0 ps  Iteration: 0  Instance: /cputest/dut_instance/dp/rf_instance
 # 
 # stdin: <EOF>
+add wave -position end  sim:/cputest/dut_instance/dp/rf_instance/regfile
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cputest/dut_instance/dp/rf_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cputest/dut_instance/dp/rf_instance
+# ** Fatal: Unable to read lock file necessary for use of uncounted nodelocked license. Exiting.
+# End time: 20:06:02 on May 20,2021, Elapsed time: 0:05:01
+# Errors: 0, Warnings: 2

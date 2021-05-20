@@ -1,5 +1,5 @@
 Flow report for IITB-proc
-Thu May 20 18:00:57 2021
+Thu May 20 20:00:43 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,21 +41,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu May 20 18:00:57 2021       ;
+; Flow Status                        ; Successful - Thu May 20 20:00:43 2021       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB-proc                                   ;
 ; Top-level Entity Name              ; iitbproc                                    ;
 ; Family                             ; Cyclone 10 LP                               ;
-; Total logic elements               ; 695 / 55,856 ( 1 % )                        ;
-;     Total combinational functions  ; 657 / 55,856 ( 1 % )                        ;
-;     Dedicated logic registers      ; 189 / 55,856 ( < 1 % )                      ;
-; Total registers                    ; 189                                         ;
-; Total pins                         ; 36 / 322 ( 11 % )                           ;
+; Total logic elements               ; 0 / 6,272 ( 0 % )                           ;
+;     Total combinational functions  ; 0 / 6,272 ( 0 % )                           ;
+;     Dedicated logic registers      ; 0 / 6,272 ( 0 % )                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 35 / 89 ( 39 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 1,048,576 / 2,396,160 ( 44 % )              ;
-; Embedded Multiplier 9-bit elements ; 0 / 312 ( 0 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
-; Device                             ; 10CL055YF484C6G                             ;
+; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
+; Device                             ; 10CL006YE144C6G                             ;
 ; Timing Models                      ; Final                                       ;
 +------------------------------------+---------------------------------------------+
 
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/20/2021 17:58:50 ;
+; Start date & time ; 05/20/2021 19:59:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; IITB-proc           ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 8796762015399.162151373005119          ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 8796762015399.162152098703541          ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; iitbproc-tb.vhd                   ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -103,12 +103,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:28     ; 1.0                     ; 439 MB              ; 00:00:25                           ;
-; Fitter               ; 00:01:16     ; 1.0                     ; 686 MB              ; 00:01:11                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 362 MB              ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:09     ; 1.0                     ; 480 MB              ; 00:00:07                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 612 MB              ; 00:00:01                           ;
-; Total                ; 00:02:00     ; --                      ; --                  ; 00:01:49                           ;
+; Analysis & Synthesis ; 00:00:40     ; 1.0                     ; 419 MB              ; 00:00:34                           ;
+; Fitter               ; 00:00:06     ; 1.0                     ; 561 MB              ; 00:00:05                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 345 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 396 MB              ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 595 MB              ; 00:00:00                           ;
+; Total                ; 00:00:51     ; --                      ; --                  ; 00:00:43                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -25,7 +25,6 @@ entity controller is
 			
 			zc : out std_logic;
 			
-			start: out std_logic;
 			
 			-- state inference pins
 			ir : in std_logic_vector(15 downto 0);
@@ -60,12 +59,10 @@ begin
 	rf_wc <= "00";
 	rf_dc <= "00";
 	zc <= '0';
-	start <= '0';
 
 	case state is 
 		when 0 => 
 			next_state <= 1;
-			start <= '1';
 			
 		when 1 => 
 			upd_ir <= '1';
@@ -168,9 +165,9 @@ begin
 			upd_pc <= '1';
 				
 			if (z_imm = '1') then
-				alu_bc <= "01";
-			else 
 				alu_bc <= "10";
+			else 
+				alu_bc <= "01";
 			end if;
 			next_state <= 0;
 			

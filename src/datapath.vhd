@@ -152,11 +152,11 @@ begin
 	
 	tr_combine <= rf_out1 when (trc = '1') else alu_o;
 	pc_combine <= rf_out2 when (pc_c = '1') else alu_o;
+	z_imm <= alu_z;
 	main : process(clk)
 	begin
 		if rising_edge(clk) then
 			tr <= tr_combine;
-			z_imm <= alu_z;
 			if upd_z = '1' then
 				z <= z_combine;
 			end if;

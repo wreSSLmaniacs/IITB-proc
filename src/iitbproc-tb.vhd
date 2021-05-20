@@ -17,22 +17,21 @@ architecture behv of cputest is
 			wa, inst : in std_logic_vector(15 downto 0);
 			clk : in std_logic;
 			rst : in std_logic;
-			mem_w : in std_logic;
-			start : out std_logic
+			mem_w : in std_logic
 		);
 	end component;
 	
 	signal wa, inst : std_logic_vector(15 downto 0);
 	signal clk : std_logic := '1';
-	signal rst, mem_w, start : std_logic;
+	signal rst, mem_w : std_logic;
 	
 begin
 	dut_instance: iitbproc
-		port map (wa => wa, inst => inst, clk => clk, rst => rst, mem_w => mem_w, start => start);
+		port map (wa => wa, inst => inst, clk => clk, rst => rst, mem_w => mem_w);
 	
 	
 	process 
-		file in_file : text open read_mode is "/home/anon/Desktop/IITB-proc/src/in.txt";
+		file in_file : text open read_mode is "/home/anon/Desktop/IITB-proc/src/bin.txt";
 		variable in_line : line;
 		variable in_var : std_logic_vector(15 downto 0);
 		variable count : integer range 0 to 32;
@@ -67,16 +66,11 @@ begin
 			wait for 100 ns;
 	
 			rst <= '0';
-			while curr < count+1 loop
+			for i in 1 to 1000 loop
 				clk <= '1';
 				wait for 100 ns;
 				clk <= '0';
 				wait for 100 ns;
-				
-				if (start = '1') then
-					curr := curr + 1;
-				end if;
-				
 			end loop;
 	wait;
 	end process;

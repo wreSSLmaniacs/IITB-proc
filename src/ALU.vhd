@@ -69,8 +69,8 @@ begin
 	-- level 0
 	
 	lvl0 : for I in 15 downto 0 generate
-		g_0(I) <= a(I) and b(I);
-		p_0(I) <= a(I) xor b(I);
+		g_0(I) <= a(I) and bx(I);
+		p_0(I) <= a(I) xor bx(I);
 	end generate lvl0;
 	
 	copy0 : for I in 0 to 0 generate

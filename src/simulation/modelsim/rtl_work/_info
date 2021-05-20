@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/anon/Desktop/IITB-proc/src/simulation/modelsim
 Eadder
-Z1 w1621485715
+Z1 w1621520597
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 1
@@ -23,9 +23,9 @@ Vcj1n1hb07^G@CaOGPP=6N3
 !s100 68zo`:n6XgaBQhhma3`1f2
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1621513928
+Z7 !s110 1621521060
 !i10b 1
-Z8 !s108 1621513928.000000
+Z8 !s108 1621521059.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/ALU.vhd|
 Z10 !s107 /home/anon/Desktop/IITB-proc/src/ALU.vhd|
 !i113 1
@@ -38,8 +38,8 @@ DEx4 work 5 adder 0 22 cj1n1hb07^G@CaOGPP=6N3
 !i122 1
 l61
 L44 91
-VlilagbcR3lgJz1>CnLb:V0
-!s100 UPnE_zzMhHX2`><J5P35E1
+VmAHaTTVeCZ_o3ZlKOJ4gQ0
+!s100 JTH:`obiPRkAi0Yh_08o31
 R6
 31
 R7
@@ -133,7 +133,7 @@ R10
 R11
 R12
 Econtroller
-Z13 w1621513287
+Z13 w1621520914
 Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 R2
 R3
@@ -143,15 +143,15 @@ Z15 8/home/anon/Desktop/IITB-proc/src/controller.vhd
 Z16 F/home/anon/Desktop/IITB-proc/src/controller.vhd
 l0
 L8 1
-Vzm:^9]9]UoXi0e>`Gf]cd0
-!s100 8YM7L@Mk1DFR;aTW;C_H20
+V<U7mmlXS@eWWCbaPnzehD1
+!s100 Yk7Sb;aWeHjf1@`5WNCU_2
 R6
 31
-Z17 !s110 1621513927
+Z17 !s110 1621521059
 !i10b 1
-Z18 !s108 1621513927.000000
-Z19 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/controller.vhd|
-Z20 !s107 /home/anon/Desktop/IITB-proc/src/controller.vhd|
+R8
+Z18 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/controller.vhd|
+Z19 !s107 /home/anon/Desktop/IITB-proc/src/controller.vhd|
 !i113 1
 R11
 R12
@@ -159,84 +159,84 @@ Abehv
 R14
 R2
 R3
-DEx4 work 10 controller 0 22 zm:^9]9]UoXi0e>`Gf]cd0
+DEx4 work 10 controller 0 22 <U7mmlXS@eWWCbaPnzehD1
 !i122 0
-l41
-L37 194
-V5V2Lm`N?_a;:RZihkGKjz2
-!s100 NF8ceFIZ0<f1?n;OP^75;2
+l40
+L36 192
+VUoANfaE;O;a?0Kz`S9J<g2
+!s100 WRdgCWLok_`0i8K1P_UT73
 R6
 31
 R17
 !i10b 1
+R8
 R18
 R19
-R20
 !i113 1
 R11
 R12
 Ecputest
-Z21 w1621513727
+Z20 w1621519793
 R14
-Z22 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+Z21 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
 R2
 R3
 !i122 7
 R0
-Z23 8/home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd
-Z24 F/home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd
+Z22 8/home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd
+Z23 F/home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd
 l0
 L10 1
 V4JX5H4^eb1SQ_=RMMC1HJ0
 !s100 Mz^lMaN:Z_2TXz5;bZcXL3
 R6
 31
-Z25 !s110 1621513930
+Z24 !s110 1621521061
 !i10b 1
-Z26 !s108 1621513930.000000
-Z27 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd|
-Z28 !s107 /home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd|
+Z25 !s108 1621521061.000000
+Z26 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd|
+Z27 !s107 /home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd|
 !i113 1
 R11
 R12
 Abehv
 R14
-R22
+R21
 R2
 R3
-Z29 DEx4 work 7 cputest 0 22 4JX5H4^eb1SQ_=RMMC1HJ0
+Z28 DEx4 work 7 cputest 0 22 4JX5H4^eb1SQ_=RMMC1HJ0
 !i122 7
-l29
-Z30 L13 71
-Z31 Ve>?kUf@ACJ>PB;6b2IRJG2
-Z32 !s100 @BFSZCfTioKW[6`Rdm?]=2
+l28
+Z29 L13 65
+Z30 VM50JUNdd9@2HQK@7aYXJE3
+Z31 !s100 IR8IVK;2ULg0YDe1D5ZoM1
 R6
 31
-R25
+R24
 !i10b 1
+R25
 R26
 R27
-R28
 !i113 1
 R11
 R12
 Edatapath
-Z33 w1621491028
+Z32 w1621520983
 R2
 R3
 !i122 4
 R0
-Z34 8/home/anon/Desktop/IITB-proc/src/datapath.vhd
-Z35 F/home/anon/Desktop/IITB-proc/src/datapath.vhd
+Z33 8/home/anon/Desktop/IITB-proc/src/datapath.vhd
+Z34 F/home/anon/Desktop/IITB-proc/src/datapath.vhd
 l0
 L7 1
 V0Fd<D40YkX@K2SMggc5Ra0
 !s100 O?If0XN>K0oiWfkEZ7FSN3
 R6
 31
-R7
+R24
 !i10b 1
-R8
+Z35 !s108 1621521060.000000
 Z36 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/datapath.vhd|
 Z37 !s107 /home/anon/Desktop/IITB-proc/src/datapath.vhd|
 !i113 1
@@ -249,20 +249,20 @@ DEx4 work 8 datapath 0 22 0Fd<D40YkX@K2SMggc5Ra0
 !i122 4
 l91
 L36 139
-VD]h^7a=mX9U:D?A7ON=oj0
-!s100 M?9<RbFP>d35`P]DK7X990
+Va[FICag:gI;FCnS;SbXed0
+!s100 MMMZWX5O3^23j2Jk?igQ<0
 R6
 31
-R7
+R24
 !i10b 1
-R8
+R35
 R36
 R37
 !i113 1
 R11
 R12
 Eiitbproc
-Z38 w1621487613
+Z38 w1621519512
 R2
 R3
 !i122 5
@@ -271,46 +271,46 @@ Z39 8/home/anon/Desktop/IITB-proc/src/iitbproc.vhd
 Z40 F/home/anon/Desktop/IITB-proc/src/iitbproc.vhd
 l0
 L7 1
-V0BH?@ZZ_d8E6T9c[GXWz00
-!s100 ]_K`13T;FPeBQCC0QWK4f1
+V90aeQnKRQk6h5jW3diLIa3
+!s100 [=9nOYj:jM<?9gBI@gB]K1
 R6
 31
-Z41 !s110 1621513929
+R24
 !i10b 1
-R8
-Z42 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/iitbproc.vhd|
-Z43 !s107 /home/anon/Desktop/IITB-proc/src/iitbproc.vhd|
+R25
+Z41 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/iitbproc.vhd|
+Z42 !s107 /home/anon/Desktop/IITB-proc/src/iitbproc.vhd|
 !i113 1
 R11
 R12
 Abehv
 R2
 R3
-DEx4 work 8 iitbproc 0 22 0BH?@ZZ_d8E6T9c[GXWz00
+DEx4 work 8 iitbproc 0 22 90aeQnKRQk6h5jW3diLIa3
 !i122 5
-l90
-L18 78
-V^3f>X?0>>VDW^>6ASz:`^3
-!s100 T4O[aC<8JORkUZi;=L6042
+l87
+L17 76
+VH2=lcj@K;C_Uo2PLhR2_o3
+!s100 4No8zd=mA5:G=aPBK2k?G1
 R6
 31
-R41
+R24
 !i10b 1
-R8
+R25
+R41
 R42
-R43
 !i113 1
 R11
 R12
 Ememory
-Z44 w1621489436
+Z43 w1621489436
 R14
 R2
 R3
 !i122 2
 R0
-Z45 8/home/anon/Desktop/IITB-proc/src/memory.vhd
-Z46 F/home/anon/Desktop/IITB-proc/src/memory.vhd
+Z44 8/home/anon/Desktop/IITB-proc/src/memory.vhd
+Z45 F/home/anon/Desktop/IITB-proc/src/memory.vhd
 l0
 L8 1
 V?Znj8?=NPD`DG?CiiU5@F1
@@ -319,9 +319,9 @@ R6
 31
 R7
 !i10b 1
-R8
-Z47 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/memory.vhd|
-Z48 !s107 /home/anon/Desktop/IITB-proc/src/memory.vhd|
+R35
+Z46 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/memory.vhd|
+Z47 !s107 /home/anon/Desktop/IITB-proc/src/memory.vhd|
 !i113 1
 R11
 R12
@@ -339,9 +339,9 @@ R6
 31
 R7
 !i10b 1
-R8
+R35
+R46
 R47
-R48
 !i113 1
 R11
 R12
@@ -387,14 +387,14 @@ R10
 R11
 R12
 Erf
-Z49 w1621489421
+Z48 w1621489421
 R14
 R2
 R3
 !i122 3
 R0
-Z50 8/home/anon/Desktop/IITB-proc/src/RF.vhd
-Z51 F/home/anon/Desktop/IITB-proc/src/RF.vhd
+Z49 8/home/anon/Desktop/IITB-proc/src/RF.vhd
+Z50 F/home/anon/Desktop/IITB-proc/src/RF.vhd
 l0
 L8 1
 V_F2b36EWIUU6PMnB3SOR40
@@ -403,9 +403,9 @@ R6
 31
 R7
 !i10b 1
-R8
-Z52 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/RF.vhd|
-Z53 !s107 /home/anon/Desktop/IITB-proc/src/RF.vhd|
+R35
+Z51 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/RF.vhd|
+Z52 !s107 /home/anon/Desktop/IITB-proc/src/RF.vhd|
 !i113 1
 R11
 R12
@@ -423,9 +423,9 @@ R6
 31
 R7
 !i10b 1
-R8
+R35
+R51
 R52
-R53
 !i113 1
 R11
 R12
