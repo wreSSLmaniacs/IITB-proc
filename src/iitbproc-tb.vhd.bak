@@ -1,0 +1,46 @@
+library work;
+use work.all;
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity cputest is 
+end entity;
+
+architecture behv of cputest is
+	component iitbproc is
+	port
+		(
+			wa, inst : in std_logic_vector(15 downto 0);
+			clk : in std_logic;
+			rst : in std_logic;
+			mem_w : in std_logic;
+			start : out std_logic
+		);
+	end component;
+	
+	signal wa, inst : std_logic_vector(15 downto 0);
+	signal clk : std_logic := '0';
+	signal rst, mem_w, start : std_logic;
+	
+begin
+	dut_instance: iitbproc
+		port map (wa => wa, inst => inst, clk => clk, rst => rst, mem_w => mem_w, start => start);
+		
+	process 
+		file in_file : text open read_mode is "/home/anon/Desktop/IITB-proc/src/in.txt";
+		variable in_line : line;
+		variable in_var : std_logic_vector(15 downto 0);
+		variable count : integer;
+		variable curr : integer;
+		
+		begin
+			count := 0;
+			curr := 0;
+			
+			while not endfile(in_file) loop
+				rst <= '1';
+				
+			end loop;
+
+end architecture;

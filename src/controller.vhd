@@ -25,6 +25,8 @@ entity controller is
 			
 			zc : out std_logic;
 			
+			start: out std_logic;
+			
 			-- state inference pins
 			ir : in std_logic_vector(15 downto 0);
 			c,z : in std_logic;
@@ -33,7 +35,7 @@ entity controller is
 end entity;
 
 architecture behv of controller is
-	subtype state_labels is natural range 0 to 10;
+	subtype state_labels is natural range 0 to 11;
 	signal state : state_labels := 0;
 begin
 
@@ -59,17 +61,19 @@ main : process(clk)
 		rf_wc <= "00";
 		rf_dc <= "00";
 		zc <= '0';
+		start <= '0';
 		
 		if (rst = '1') then
-			state <= 0;
+			state <= 3;
 		else 
 		case state is 
 			when 0 => 
 				state <= 1;
+				start <= '1';
 				
 			when 1 => 
 				upd_ir <= '1';
-				state <= 2;
+				state <= 11;
 				
 			when 2 =>
 				
@@ -83,8 +87,8 @@ main : process(clk)
 					upd_z <= '1';
 					rf_wc <= "10";
 					rf_dc <= "01";
-					rf_we <= '0';
-					alu_op <= not ir(13);
+					rf_we <= '1';
+					alu_op <= ir(13);
 					state <= 3;
 				
 				elsif (ir(15 downto 12) = "0001") then
@@ -210,6 +214,9 @@ main : process(clk)
 				rf_we <= '1';
 				rf_wc <= "11";
 				state <= 3;
+				
+			when 11 =>
+				state <= 2;
 				
 			when others => null;
 			end case;

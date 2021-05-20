@@ -2,7 +2,152 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "mem_w",
+					"strict" : false
+				},
+				{
+					"name" : "wa[14]",
+					"strict" : false
+				},
+				{
+					"name" : "wa[13]",
+					"strict" : false
+				},
+				{
+					"name" : "wa[15]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[15]",
+					"strict" : false
+				},
+				{
+					"name" : "wa[0]",
+					"strict" : false
+				},
+				{
+					"name" : "wa[1]",
+					"strict" : false
+				},
+				{
+					"name" : "wa[2]",
+					"strict" : false
+				},
+				{
+					"name" : "wa[3]",
+					"strict" : false
+				},
+				{
+					"name" : "wa[4]",
+					"strict" : false
+				},
+				{
+					"name" : "wa[5]",
+					"strict" : false
+				},
+				{
+					"name" : "wa[6]",
+					"strict" : false
+				},
+				{
+					"name" : "wa[7]",
+					"strict" : false
+				},
+				{
+					"name" : "wa[8]",
+					"strict" : false
+				},
+				{
+					"name" : "wa[9]",
+					"strict" : false
+				},
+				{
+					"name" : "wa[10]",
+					"strict" : false
+				},
+				{
+					"name" : "wa[11]",
+					"strict" : false
+				},
+				{
+					"name" : "wa[12]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[14]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[13]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[12]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[9]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[8]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[7]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[6]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[5]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[4]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[3]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[2]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[1]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[0]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[11]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[10]",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

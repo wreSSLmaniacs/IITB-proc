@@ -19,7 +19,7 @@ end entity;
 
 architecture behv of memory is
    type mem is array (0 to 2**16-1) of std_logic_vector(15 downto 0);
-   signal ram : mem;
+   signal ram : mem := (others => (others => '0'));
 begin
    process (clk)
    begin

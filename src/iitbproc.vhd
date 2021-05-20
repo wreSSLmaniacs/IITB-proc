@@ -10,7 +10,8 @@ entity iitbproc is
 			wa, inst : in std_logic_vector(15 downto 0);
 			clk : in std_logic;
 			rst : in std_logic;
-			mem_w : in std_logic
+			mem_w : in std_logic;
+			start : out std_logic
 		);
 end entity;
 
@@ -77,6 +78,8 @@ component controller
 			
 			zc : out std_logic;
 			
+			start : out std_logic;
+			
 			-- state inference pins
 			ir : in std_logic_vector(15 downto 0);
 			c,z : in std_logic;
@@ -88,5 +91,5 @@ begin
 	dp : datapath
 		port map (clk => clk, master_data => inst, master_wa => wa, master_wc => mem_w, m_we => m_we, m_rac => m_rac, m_wac => m_wac, upd_ir => upd_ir, upd_pc => upd_pc, trc => trc, pc_c => pc_c, upd_c => upd_c, upd_z => upd_z, alu_op => alu_op, alu_cin => alu_cin, alu_ac => alu_ac, alu_bc => alu_bc, rf_we => rf_we, rf_rc => rf_rc, rf_wc => rf_wc, rf_dc => rf_dc, rf_master => rf_master, zc => zc, ir => ir, c => c, z => z, z_imm => z_imm);
 	con : controller
-		port map (clk => clk, rst => rst, m_we => m_we, m_rac => m_rac, m_wac => m_wac, upd_ir => upd_ir, upd_pc => upd_pc, trc => trc, pc_c => pc_c, upd_c => upd_c, upd_z => upd_z, alu_op => alu_op, alu_cin => alu_cin, alu_ac => alu_ac, alu_bc => alu_bc, rf_we => rf_we, rf_rc => rf_rc, rf_wc => rf_wc, rf_dc => rf_dc, rf_master => rf_master, zc => zc, ir => ir, c => c, z => z, z_imm => z_imm);
+		port map (clk => clk, rst => rst, m_we => m_we, m_rac => m_rac, m_wac => m_wac, upd_ir => upd_ir, upd_pc => upd_pc, trc => trc, pc_c => pc_c, upd_c => upd_c, upd_z => upd_z, alu_op => alu_op, alu_cin => alu_cin, alu_ac => alu_ac, alu_bc => alu_bc, rf_we => rf_we, rf_rc => rf_rc, rf_wc => rf_wc, rf_dc => rf_dc, rf_master => rf_master, zc => zc, ir => ir, c => c, z => z, z_imm => z_imm, start => start);
 end architecture;

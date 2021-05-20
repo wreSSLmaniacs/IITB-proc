@@ -19,7 +19,7 @@ end entity;
 
 architecture behv OF RF is
    type mem is array (0 to 7) of std_logic_vector(15 downto 0);
-   signal regfile : mem;
+   signal regfile : mem := (others => (others => '0'));
 begin
 	o1 <= regfile (to_integer(unsigned(ra1)));
 	o2 <= regfile (to_integer(unsigned(ra2)));

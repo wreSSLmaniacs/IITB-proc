@@ -1,0 +1,431 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/anon/Desktop/IITB-proc/src/simulation/modelsim
+Eadder
+Z1 w1621485715
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z4 8/home/anon/Desktop/IITB-proc/src/ALU.vhd
+Z5 F/home/anon/Desktop/IITB-proc/src/ALU.vhd
+l0
+L34 1
+Vcj1n1hb07^G@CaOGPP=6N3
+!s100 68zo`:n6XgaBQhhma3`1f2
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1621496959
+!i10b 1
+Z8 !s108 1621496959.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/ALU.vhd|
+Z10 !s107 /home/anon/Desktop/IITB-proc/src/ALU.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehv
+R2
+R3
+DEx4 work 5 adder 0 22 cj1n1hb07^G@CaOGPP=6N3
+!i122 1
+l61
+L44 91
+VlilagbcR3lgJz1>CnLb:V0
+!s100 UPnE_zzMhHX2`><J5P35E1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eadder_prop
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L11 1
+VC0=UQoF39D]^nNLDD0<4D3
+!s100 717k??Nz5J:6hl=lK1>ml3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehv
+R2
+R3
+DEx4 work 10 adder_prop 0 22 C0=UQoF39D]^nNLDD0<4D3
+!i122 1
+l22
+L20 7
+Vi=S14^<M`M7[GeXLaA:aS0
+!s100 fRh^?`:5^HHC^fOY8z5FA3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ealu
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L176 1
+VzhP0C`D[AjzA_]j:PfXaG0
+!s100 leECPCziIB7N_4H[:ml4J0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehv
+R2
+R3
+DEx4 work 3 alu 0 22 zhP0C`D[AjzA_]j:PfXaG0
+!i122 1
+l207
+L186 30
+V2SK@Oa>VCaUjdm9OZAGR>2
+!s100 5i]2JazgT`T1mT@DBfUS30
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Econtroller
+Z13 w1621496725
+Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+!i122 0
+R0
+Z15 8/home/anon/Desktop/IITB-proc/src/controller.vhd
+Z16 F/home/anon/Desktop/IITB-proc/src/controller.vhd
+l0
+L8 1
+Vzm:^9]9]UoXi0e>`Gf]cd0
+!s100 8YM7L@Mk1DFR;aTW;C_H20
+R6
+31
+Z17 !s110 1621496958
+!i10b 1
+Z18 !s108 1621496958.000000
+Z19 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/controller.vhd|
+Z20 !s107 /home/anon/Desktop/IITB-proc/src/controller.vhd|
+!i113 1
+R11
+R12
+Abehv
+R14
+R2
+R3
+DEx4 work 10 controller 0 22 zm:^9]9]UoXi0e>`Gf]cd0
+!i122 0
+l40
+L37 191
+V?5?CSIVo>7K3]AV7DBaam0
+!s100 ^;PYCn:@OK2XRCTIlR<^Q1
+R6
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
+Ecputest
+Z21 w1621494731
+R14
+Z22 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+R2
+R3
+!i122 7
+R0
+Z23 8/home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd
+Z24 F/home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd
+l0
+L10 1
+V4JX5H4^eb1SQ_=RMMC1HJ0
+!s100 Mz^lMaN:Z_2TXz5;bZcXL3
+R6
+31
+Z25 !s110 1621496960
+!i10b 1
+Z26 !s108 1621496960.000000
+Z27 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd|
+Z28 !s107 /home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd|
+!i113 1
+R11
+R12
+Abehv
+R14
+R22
+R2
+R3
+Z29 DEx4 work 7 cputest 0 22 4JX5H4^eb1SQ_=RMMC1HJ0
+!i122 7
+l29
+Z30 L13 71
+Z31 V7H20dUa^Q_fmFC7OB^O4P3
+Z32 !s100 z@1_oa1W<5FOP8P]0oTPJ0
+R6
+31
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R11
+R12
+Edatapath
+Z33 w1621491028
+R2
+R3
+!i122 4
+R0
+Z34 8/home/anon/Desktop/IITB-proc/src/datapath.vhd
+Z35 F/home/anon/Desktop/IITB-proc/src/datapath.vhd
+l0
+L7 1
+V0Fd<D40YkX@K2SMggc5Ra0
+!s100 O?If0XN>K0oiWfkEZ7FSN3
+R6
+31
+R25
+!i10b 1
+R26
+Z36 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/datapath.vhd|
+Z37 !s107 /home/anon/Desktop/IITB-proc/src/datapath.vhd|
+!i113 1
+R11
+R12
+Abehv
+R2
+R3
+DEx4 work 8 datapath 0 22 0Fd<D40YkX@K2SMggc5Ra0
+!i122 4
+l91
+L36 139
+VD]h^7a=mX9U:D?A7ON=oj0
+!s100 M?9<RbFP>d35`P]DK7X990
+R6
+31
+R25
+!i10b 1
+R26
+R36
+R37
+!i113 1
+R11
+R12
+Eiitbproc
+Z38 w1621487613
+R2
+R3
+!i122 5
+R0
+Z39 8/home/anon/Desktop/IITB-proc/src/iitbproc.vhd
+Z40 F/home/anon/Desktop/IITB-proc/src/iitbproc.vhd
+l0
+L7 1
+V0BH?@ZZ_d8E6T9c[GXWz00
+!s100 ]_K`13T;FPeBQCC0QWK4f1
+R6
+31
+R25
+!i10b 1
+R26
+Z41 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/iitbproc.vhd|
+Z42 !s107 /home/anon/Desktop/IITB-proc/src/iitbproc.vhd|
+!i113 1
+R11
+R12
+Abehv
+R2
+R3
+DEx4 work 8 iitbproc 0 22 0BH?@ZZ_d8E6T9c[GXWz00
+!i122 5
+l90
+L18 78
+V^3f>X?0>>VDW^>6ASz:`^3
+!s100 T4O[aC<8JORkUZi;=L6042
+R6
+31
+R25
+!i10b 1
+R26
+R41
+R42
+!i113 1
+R11
+R12
+Ememory
+Z43 w1621489436
+R14
+R2
+R3
+!i122 2
+R0
+Z44 8/home/anon/Desktop/IITB-proc/src/memory.vhd
+Z45 F/home/anon/Desktop/IITB-proc/src/memory.vhd
+l0
+L8 1
+V?Znj8?=NPD`DG?CiiU5@F1
+!s100 eWmP8Nl1En<<bjCHGkCad2
+R6
+31
+R7
+!i10b 1
+R8
+Z46 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/memory.vhd|
+Z47 !s107 /home/anon/Desktop/IITB-proc/src/memory.vhd|
+!i113 1
+R11
+R12
+Abehv
+R14
+R2
+R3
+DEx4 work 6 memory 0 22 ?Znj8?=NPD`DG?CiiU5@F1
+!i122 2
+l23
+L20 14
+VB1?f[4kD3n8?TMYK1`Vd21
+!s100 AUnkn;S=EID=AJ3WT<ETY1
+R6
+31
+R7
+!i10b 1
+R8
+R46
+R47
+!i113 1
+R11
+R12
+Enand16
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L148 1
+VD3TBNmA?aPZUBW?EAVdhc0
+!s100 K1JjY5mMgJ537`da=9Jo?1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehv
+R2
+R3
+DEx4 work 6 nand16 0 22 D3TBNmA?aPZUBW?EAVdhc0
+!i122 1
+l157
+L156 6
+V8gZ3a5lggSb5CS9AJ0ELf2
+!s100 9c^3E7[U]F99mfm<Ol6XH0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Erf
+Z48 w1621489421
+R14
+R2
+R3
+!i122 3
+R0
+Z49 8/home/anon/Desktop/IITB-proc/src/RF.vhd
+Z50 F/home/anon/Desktop/IITB-proc/src/RF.vhd
+l0
+L8 1
+V_F2b36EWIUU6PMnB3SOR40
+!s100 mUoPL]IGQ]VSd2E0F>4`O1
+R6
+31
+R7
+!i10b 1
+R8
+Z51 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/RF.vhd|
+Z52 !s107 /home/anon/Desktop/IITB-proc/src/RF.vhd|
+!i113 1
+R11
+R12
+Abehv
+R14
+R2
+R3
+DEx4 work 2 rf 0 22 _F2b36EWIUU6PMnB3SOR40
+!i122 3
+l23
+L20 15
+VYmagVOM5HU_o]@[^>`38T2
+!s100 4EMK_B48Q>NDG]lP@3COi3
+R6
+31
+R7
+!i10b 1
+R8
+R51
+R52
+!i113 1
+R11
+R12

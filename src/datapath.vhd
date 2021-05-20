@@ -77,7 +77,7 @@ architecture behv of datapath is
 	
 	signal m_read, m_write, m_data, m_out : std_logic_vector(15 downto 0);
 	
-	signal pc, tr : std_logic_vector(15 downto 0);
+	signal pc, tr : std_logic_vector(15 downto 0) := (others => '0');
 	
 	signal ext9bit : std_logic_vector (15 downto 0) := "0000000000000000";
 	
