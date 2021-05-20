@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IITB-proc
-Thu May 20 13:16:17 2021
+Thu May 20 17:59:18 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -13,7 +13,7 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
   7. Analysis & Synthesis RAM Summary
-  8. Registers Removed During Synthesis
+  8. User-Specified and Inferred Latches
   9. General Register Statistics
  10. Registers Packed Into Inferred Megafunctions
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
@@ -49,15 +49,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 20 13:16:16 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 20 17:59:18 2021       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB-proc                                   ;
 ; Top-level Entity Name              ; iitbproc                                    ;
 ; Family                             ; Cyclone 10 LP                               ;
-; Total logic elements               ; 753                                         ;
-;     Total combinational functions  ; 641                                         ;
-;     Dedicated logic registers      ; 211                                         ;
-; Total registers                    ; 211                                         ;
+; Total logic elements               ; 769                                         ;
+;     Total combinational functions  ; 657                                         ;
+;     Dedicated logic registers      ; 189                                         ;
+; Total registers                    ; 189                                         ;
 ; Total pins                         ; 36                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 1,048,576                                   ;
@@ -184,20 +184,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 753       ;
+; Estimated Total logic elements              ; 769       ;
 ;                                             ;           ;
-; Total combinational functions               ; 641       ;
+; Total combinational functions               ; 657       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 471       ;
-;     -- 3 input functions                    ; 137       ;
-;     -- <=2 input functions                  ; 33        ;
+;     -- 4 input functions                    ; 465       ;
+;     -- 3 input functions                    ; 155       ;
+;     -- <=2 input functions                  ; 37        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 641       ;
+;     -- normal mode                          ; 657       ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
-; Total registers                             ; 211       ;
-;     -- Dedicated logic registers            ; 211       ;
+; Total registers                             ; 189       ;
+;     -- Dedicated logic registers            ; 189       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 36        ;
@@ -206,9 +206,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 339       ;
-; Total fan-out                               ; 6772      ;
-; Average fan-out                             ; 6.44      ;
+; Maximum fan-out                             ; 317       ;
+; Total fan-out                               ; 6750      ;
+; Average fan-out                             ; 6.45      ;
 +---------------------------------------------+-----------+
 
 
@@ -217,17 +217,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                 ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |iitbproc                                    ; 641 (0)             ; 211 (0)                   ; 1048576     ; 0            ; 0       ; 0         ; 36   ; 0            ; |iitbproc                                                                                                           ; iitbproc        ; work         ;
-;    |controller:con|                          ; 70 (70)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|controller:con                                                                                            ; controller      ; work         ;
-;    |datapath:dp|                             ; 571 (207)           ; 182 (51)                  ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp                                                                                               ; datapath        ; work         ;
-;       |ALU:alu_instance|                     ; 106 (5)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance                                                                              ; ALU             ; work         ;
-;          |adder:add|                         ; 86 (50)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add                                                                    ; adder           ; work         ;
+; |iitbproc                                    ; 657 (0)             ; 189 (0)                   ; 1048576     ; 0            ; 0       ; 0         ; 36   ; 0            ; |iitbproc                                                                                                           ; iitbproc        ; work         ;
+;    |controller:con|                          ; 80 (80)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|controller:con                                                                                            ; controller      ; work         ;
+;    |datapath:dp|                             ; 577 (204)           ; 182 (51)                  ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp                                                                                               ; datapath        ; work         ;
+;       |ALU:alu_instance|                     ; 113 (6)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance                                                                              ; ALU             ; work         ;
+;          |adder:add|                         ; 91 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add                                                                    ; adder           ; work         ;
 ;             |adder_prop:\lvl1:10:GP1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:10:GP1                                            ; adder_prop      ; work         ;
 ;             |adder_prop:\lvl1:11:GP1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:11:GP1                                            ; adder_prop      ; work         ;
 ;             |adder_prop:\lvl1:12:GP1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:12:GP1                                            ; adder_prop      ; work         ;
 ;             |adder_prop:\lvl1:13:GP1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:13:GP1                                            ; adder_prop      ; work         ;
 ;             |adder_prop:\lvl1:14:GP1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:14:GP1                                            ; adder_prop      ; work         ;
-;             |adder_prop:\lvl1:15:GP1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:15:GP1                                            ; adder_prop      ; work         ;
 ;             |adder_prop:\lvl1:1:GP1|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:1:GP1                                             ; adder_prop      ; work         ;
 ;             |adder_prop:\lvl1:2:GP1|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:2:GP1                                             ; adder_prop      ; work         ;
 ;             |adder_prop:\lvl1:3:GP1|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:3:GP1                                             ; adder_prop      ; work         ;
@@ -238,22 +237,23 @@ https://fpgasoftware.intel.com/eula.
 ;             |adder_prop:\lvl1:8:GP1|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:8:GP1                                             ; adder_prop      ; work         ;
 ;             |adder_prop:\lvl1:9:GP1|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl1:9:GP1                                             ; adder_prop      ; work         ;
 ;             |adder_prop:\lvl2:10:GP2|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:10:GP2                                            ; adder_prop      ; work         ;
-;             |adder_prop:\lvl2:11:GP2|        ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:11:GP2                                            ; adder_prop      ; work         ;
+;             |adder_prop:\lvl2:11:GP2|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:11:GP2                                            ; adder_prop      ; work         ;
 ;             |adder_prop:\lvl2:14:GP2|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:14:GP2                                            ; adder_prop      ; work         ;
 ;             |adder_prop:\lvl2:4:GP2|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:4:GP2                                             ; adder_prop      ; work         ;
 ;             |adder_prop:\lvl2:5:GP2|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:5:GP2                                             ; adder_prop      ; work         ;
 ;             |adder_prop:\lvl2:6:GP2|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:6:GP2                                             ; adder_prop      ; work         ;
 ;             |adder_prop:\lvl2:7:GP2|         ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:7:GP2                                             ; adder_prop      ; work         ;
 ;             |adder_prop:\lvl2:8:GP2|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:8:GP2                                             ; adder_prop      ; work         ;
-;             |adder_prop:\lvl2:9:GP2|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:9:GP2                                             ; adder_prop      ; work         ;
+;             |adder_prop:\lvl2:9:GP2|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl2:9:GP2                                             ; adder_prop      ; work         ;
+;             |adder_prop:\lvl3:14:GP3|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl3:14:GP3                                            ; adder_prop      ; work         ;
 ;             |adder_prop:\lvl3:6:GP3|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl3:6:GP3                                             ; adder_prop      ; work         ;
 ;             |adder_prop:\lvl3:7:GP3|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|adder:add|adder_prop:\lvl3:7:GP3                                             ; adder_prop      ; work         ;
-;          |nand16:logic|                      ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|nand16:logic                                                                 ; nand16          ; work         ;
+;          |nand16:logic|                      ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|ALU:alu_instance|nand16:logic                                                                 ; nand16          ; work         ;
 ;       |RF:rf_instance|                       ; 152 (152)           ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|RF:rf_instance                                                                                ; RF              ; work         ;
-;       |memory:memory_instance|               ; 106 (0)             ; 3 (0)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|memory:memory_instance                                                                        ; memory          ; work         ;
-;          |altsyncram:ram_rtl_0|              ; 106 (0)             ; 3 (0)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|memory:memory_instance|altsyncram:ram_rtl_0                                                   ; altsyncram      ; work         ;
-;             |altsyncram_00m1:auto_generated| ; 106 (0)             ; 3 (3)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|memory:memory_instance|altsyncram:ram_rtl_0|altsyncram_00m1:auto_generated                    ; altsyncram_00m1 ; work         ;
-;                |decode_ksa:decode2|          ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|memory:memory_instance|altsyncram:ram_rtl_0|altsyncram_00m1:auto_generated|decode_ksa:decode2 ; decode_ksa      ; work         ;
+;       |memory:memory_instance|               ; 108 (0)             ; 3 (0)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|memory:memory_instance                                                                        ; memory          ; work         ;
+;          |altsyncram:ram_rtl_0|              ; 108 (0)             ; 3 (0)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|memory:memory_instance|altsyncram:ram_rtl_0                                                   ; altsyncram      ; work         ;
+;             |altsyncram_00m1:auto_generated| ; 108 (0)             ; 3 (3)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|memory:memory_instance|altsyncram:ram_rtl_0|altsyncram_00m1:auto_generated                    ; altsyncram_00m1 ; work         ;
+;                |decode_ksa:decode2|          ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|memory:memory_instance|altsyncram:ram_rtl_0|altsyncram_00m1:auto_generated|decode_ksa:decode2 ; decode_ksa      ; work         ;
 ;                |mux_job:mux3|                ; 96 (96)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |iitbproc|datapath:dp|memory:memory_instance|altsyncram:ram_rtl_0|altsyncram_00m1:auto_generated|mux_job:mux3       ; mux_job         ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -268,14 +268,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+-------------------------------------------+
 
 
-+-------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                      ;
-+---------------------------------------+---------------------------------+
-; Register name                         ; Reason for Removal              ;
-+---------------------------------------+---------------------------------+
-; controller:con|rf_rc                  ; Merged with controller:con|m_we ;
-; Total Number of Removed Registers = 1 ;                                 ;
-+---------------------------------------+---------------------------------+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++----------------------------------------------------+----------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal  ; Free of Timing Hazards ;
++----------------------------------------------------+----------------------+------------------------+
+; controller:con|next_state[0]                       ; controller:con|Mux31 ; yes                    ;
+; controller:con|next_state[1]                       ; controller:con|Mux31 ; yes                    ;
+; controller:con|next_state[2]                       ; controller:con|Mux31 ; yes                    ;
+; controller:con|next_state[3]                       ; controller:con|Mux31 ; yes                    ;
+; Number of user-specified and inferred latches = 4  ;                      ;                        ;
++----------------------------------------------------+----------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -283,9 +287,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 211   ;
-; Number of registers using Synchronous Clear  ; 14    ;
-; Number of registers using Synchronous Load   ; 34    ;
+; Total registers                              ; 189   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 160   ;
@@ -307,18 +311,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; 13:1               ; 3 bits    ; 24 LEs        ; 15 LEs               ; 9 LEs                  ; Yes        ; |iitbproc|controller:con|rf_wc[1]     ;
-; 12:1               ; 3 bits    ; 24 LEs        ; 3 LEs                ; 21 LEs                 ; Yes        ; |iitbproc|controller:con|rf_master[0] ;
-; 14:1               ; 3 bits    ; 27 LEs        ; 18 LEs               ; 9 LEs                  ; Yes        ; |iitbproc|controller:con|rf_wc[0]     ;
-; 15:1               ; 2 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; Yes        ; |iitbproc|controller:con|rf_we        ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |iitbproc|datapath:dp|alu_a[3]        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |iitbproc|datapath:dp|alu_b[9]        ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |iitbproc|datapath:dp|rf_data[5]      ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |iitbproc|datapath:dp|rf_data[15]     ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 3 LEs                ; 30 LEs                 ; Yes        ; |iitbproc|controller:con|rf_master[0] ;
+; 19:1               ; 4 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |iitbproc|controller:con|state[0]     ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |iitbproc|datapath:dp|rf_w[0]         ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |iitbproc|datapath:dp|alu_a[14]       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |iitbproc|datapath:dp|alu_b[8]        ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |iitbproc|datapath:dp|rf_data[5]      ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |iitbproc|datapath:dp|rf_data[13]     ;
 ; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |iitbproc|datapath:dp|m_write[7]      ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |iitbproc|datapath:dp|alu_b[7]        ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |iitbproc|datapath:dp|alu_b[5]        ;
+; 11:1               ; 3 bits    ; 21 LEs        ; 12 LEs               ; 9 LEs                  ; No         ; |iitbproc|controller:con|Mux18        ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 10 LEs               ; 6 LEs                  ; No         ; |iitbproc|controller:con|Mux3         ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |iitbproc|controller:con|Mux7         ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |iitbproc|controller:con|Mux33        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 
 
@@ -418,21 +424,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 36                          ;
-; cycloneiii_ff         ; 211                         ;
+; cycloneiii_ff         ; 189                         ;
 ;     ENA               ; 144                         ;
 ;     ENA SLD           ; 16                          ;
-;     SCLR              ; 14                          ;
-;     SLD               ; 18                          ;
-;     plain             ; 19                          ;
-; cycloneiii_lcell_comb ; 641                         ;
-;     normal            ; 641                         ;
-;         2 data inputs ; 33                          ;
-;         3 data inputs ; 137                         ;
-;         4 data inputs ; 471                         ;
+;     SLD               ; 16                          ;
+;     plain             ; 13                          ;
+; cycloneiii_lcell_comb ; 657                         ;
+;     normal            ; 657                         ;
+;         2 data inputs ; 37                          ;
+;         3 data inputs ; 155                         ;
+;         4 data inputs ; 465                         ;
 ; cycloneiii_ram_block  ; 128                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 17.00                       ;
-; Average LUT depth     ; 10.35                       ;
+; Average LUT depth     ; 10.14                       ;
 +-----------------------+-----------------------------+
 
 
@@ -441,7 +446,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -451,7 +456,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu May 20 13:15:31 2021
+    Info: Processing started: Thu May 20 17:58:49 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB-proc -c IITB-proc
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
@@ -492,6 +497,30 @@ Info (12128): Elaborating entity "nand16" for hierarchy "datapath:dp|ALU:alu_ins
 Info (12128): Elaborating entity "memory" for hierarchy "datapath:dp|memory:memory_instance" File: /home/anon/Desktop/IITB-proc/src/datapath.vhd Line: 98
 Info (12128): Elaborating entity "RF" for hierarchy "datapath:dp|RF:rf_instance" File: /home/anon/Desktop/IITB-proc/src/datapath.vhd Line: 101
 Info (12128): Elaborating entity "controller" for hierarchy "controller:con" File: /home/anon/Desktop/IITB-proc/src/iitbproc.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at controller.vhd(65): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 65
+Warning (10492): VHDL Process Statement warning at controller.vhd(77): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 77
+Warning (10492): VHDL Process Statement warning at controller.vhd(78): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 78
+Warning (10492): VHDL Process Statement warning at controller.vhd(79): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 79
+Warning (10492): VHDL Process Statement warning at controller.vhd(79): signal "c" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 79
+Warning (10492): VHDL Process Statement warning at controller.vhd(80): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 80
+Warning (10492): VHDL Process Statement warning at controller.vhd(80): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 80
+Warning (10492): VHDL Process Statement warning at controller.vhd(82): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at controller.vhd(87): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 87
+Warning (10492): VHDL Process Statement warning at controller.vhd(90): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 90
+Warning (10492): VHDL Process Statement warning at controller.vhd(99): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 99
+Warning (10492): VHDL Process Statement warning at controller.vhd(107): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 107
+Warning (10492): VHDL Process Statement warning at controller.vhd(111): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 111
+Warning (10492): VHDL Process Statement warning at controller.vhd(117): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 117
+Warning (10492): VHDL Process Statement warning at controller.vhd(121): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 121
+Warning (10492): VHDL Process Statement warning at controller.vhd(125): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 125
+Warning (10492): VHDL Process Statement warning at controller.vhd(129): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 129
+Warning (10492): VHDL Process Statement warning at controller.vhd(137): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 137
+Warning (10492): VHDL Process Statement warning at controller.vhd(170): signal "z_imm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 170
+Warning (10631): VHDL Process Statement warning at controller.vhd(43): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 43
+Info (10041): Inferred latch for "next_state[0]" at controller.vhd(43) File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 43
+Info (10041): Inferred latch for "next_state[1]" at controller.vhd(43) File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 43
+Info (10041): Inferred latch for "next_state[2]" at controller.vhd(43) File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 43
+Info (10041): Inferred latch for "next_state[3]" at controller.vhd(43) File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 43
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "datapath:dp|RF:rf_instance|regfile" is uninferred due to inappropriate RAM size File: /home/anon/Desktop/IITB-proc/src/RF.vhd Line: 22
 Info (19000): Inferred 1 megafunctions from design logic
@@ -536,18 +565,26 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/deco
     Info (12023): Found entity 1: decode_ksa File: /home/anon/Desktop/IITB-proc/src/db/decode_ksa.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_job.tdf
     Info (12023): Found entity 1: mux_job File: /home/anon/Desktop/IITB-proc/src/db/mux_job.tdf Line: 23
+Warning (13012): Latch controller:con|next_state[0] has unsafe behavior File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 43
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:con|state[0] File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 206
+Warning (13012): Latch controller:con|next_state[1] has unsafe behavior File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 43
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:con|state[2] File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 206
+Warning (13012): Latch controller:con|next_state[2] has unsafe behavior File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 43
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:con|state[2] File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 206
+Warning (13012): Latch controller:con|next_state[3] has unsafe behavior File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 43
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:con|state[0] File: /home/anon/Desktop/IITB-proc/src/controller.vhd Line: 206
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 982 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 997 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 35 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 818 logic cells
+    Info (21061): Implemented 833 logic cells
     Info (21064): Implemented 128 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 442 megabytes
-    Info: Processing ended: Thu May 20 13:16:17 2021
-    Info: Elapsed time: 00:00:46
-    Info: Total CPU time (on all processors): 00:00:39
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
+    Info: Peak virtual memory: 439 megabytes
+    Info: Processing ended: Thu May 20 17:59:18 2021
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:25
 
 

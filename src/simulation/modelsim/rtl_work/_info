@@ -23,9 +23,9 @@ Vcj1n1hb07^G@CaOGPP=6N3
 !s100 68zo`:n6XgaBQhhma3`1f2
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1621496959
+Z7 !s110 1621513928
 !i10b 1
-Z8 !s108 1621496959.000000
+Z8 !s108 1621513928.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/ALU.vhd|
 Z10 !s107 /home/anon/Desktop/IITB-proc/src/ALU.vhd|
 !i113 1
@@ -133,7 +133,7 @@ R10
 R11
 R12
 Econtroller
-Z13 w1621496725
+Z13 w1621513287
 Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 R2
 R3
@@ -147,9 +147,9 @@ Vzm:^9]9]UoXi0e>`Gf]cd0
 !s100 8YM7L@Mk1DFR;aTW;C_H20
 R6
 31
-Z17 !s110 1621496958
+Z17 !s110 1621513927
 !i10b 1
-Z18 !s108 1621496958.000000
+Z18 !s108 1621513927.000000
 Z19 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/controller.vhd|
 Z20 !s107 /home/anon/Desktop/IITB-proc/src/controller.vhd|
 !i113 1
@@ -161,10 +161,10 @@ R2
 R3
 DEx4 work 10 controller 0 22 zm:^9]9]UoXi0e>`Gf]cd0
 !i122 0
-l40
-L37 191
-V?5?CSIVo>7K3]AV7DBaam0
-!s100 ^;PYCn:@OK2XRCTIlR<^Q1
+l41
+L37 194
+V5V2Lm`N?_a;:RZihkGKjz2
+!s100 NF8ceFIZ0<f1?n;OP^75;2
 R6
 31
 R17
@@ -176,7 +176,7 @@ R20
 R11
 R12
 Ecputest
-Z21 w1621494731
+Z21 w1621513727
 R14
 Z22 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
 R2
@@ -191,9 +191,9 @@ V4JX5H4^eb1SQ_=RMMC1HJ0
 !s100 Mz^lMaN:Z_2TXz5;bZcXL3
 R6
 31
-Z25 !s110 1621496960
+Z25 !s110 1621513930
 !i10b 1
-Z26 !s108 1621496960.000000
+Z26 !s108 1621513930.000000
 Z27 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd|
 Z28 !s107 /home/anon/Desktop/IITB-proc/src/iitbproc-tb.vhd|
 !i113 1
@@ -208,8 +208,8 @@ Z29 DEx4 work 7 cputest 0 22 4JX5H4^eb1SQ_=RMMC1HJ0
 !i122 7
 l29
 Z30 L13 71
-Z31 V7H20dUa^Q_fmFC7OB^O4P3
-Z32 !s100 z@1_oa1W<5FOP8P]0oTPJ0
+Z31 Ve>?kUf@ACJ>PB;6b2IRJG2
+Z32 !s100 @BFSZCfTioKW[6`Rdm?]=2
 R6
 31
 R25
@@ -234,9 +234,9 @@ V0Fd<D40YkX@K2SMggc5Ra0
 !s100 O?If0XN>K0oiWfkEZ7FSN3
 R6
 31
-R25
+R7
 !i10b 1
-R26
+R8
 Z36 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/datapath.vhd|
 Z37 !s107 /home/anon/Desktop/IITB-proc/src/datapath.vhd|
 !i113 1
@@ -253,9 +253,9 @@ VD]h^7a=mX9U:D?A7ON=oj0
 !s100 M?9<RbFP>d35`P]DK7X990
 R6
 31
-R25
+R7
 !i10b 1
-R26
+R8
 R36
 R37
 !i113 1
@@ -275,11 +275,11 @@ V0BH?@ZZ_d8E6T9c[GXWz00
 !s100 ]_K`13T;FPeBQCC0QWK4f1
 R6
 31
-R25
+Z41 !s110 1621513929
 !i10b 1
-R26
-Z41 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/iitbproc.vhd|
-Z42 !s107 /home/anon/Desktop/IITB-proc/src/iitbproc.vhd|
+R8
+Z42 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/iitbproc.vhd|
+Z43 !s107 /home/anon/Desktop/IITB-proc/src/iitbproc.vhd|
 !i113 1
 R11
 R12
@@ -294,23 +294,23 @@ V^3f>X?0>>VDW^>6ASz:`^3
 !s100 T4O[aC<8JORkUZi;=L6042
 R6
 31
-R25
-!i10b 1
-R26
 R41
+!i10b 1
+R8
 R42
+R43
 !i113 1
 R11
 R12
 Ememory
-Z43 w1621489436
+Z44 w1621489436
 R14
 R2
 R3
 !i122 2
 R0
-Z44 8/home/anon/Desktop/IITB-proc/src/memory.vhd
-Z45 F/home/anon/Desktop/IITB-proc/src/memory.vhd
+Z45 8/home/anon/Desktop/IITB-proc/src/memory.vhd
+Z46 F/home/anon/Desktop/IITB-proc/src/memory.vhd
 l0
 L8 1
 V?Znj8?=NPD`DG?CiiU5@F1
@@ -320,8 +320,8 @@ R6
 R7
 !i10b 1
 R8
-Z46 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/memory.vhd|
-Z47 !s107 /home/anon/Desktop/IITB-proc/src/memory.vhd|
+Z47 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/memory.vhd|
+Z48 !s107 /home/anon/Desktop/IITB-proc/src/memory.vhd|
 !i113 1
 R11
 R12
@@ -340,8 +340,8 @@ R6
 R7
 !i10b 1
 R8
-R46
 R47
+R48
 !i113 1
 R11
 R12
@@ -387,14 +387,14 @@ R10
 R11
 R12
 Erf
-Z48 w1621489421
+Z49 w1621489421
 R14
 R2
 R3
 !i122 3
 R0
-Z49 8/home/anon/Desktop/IITB-proc/src/RF.vhd
-Z50 F/home/anon/Desktop/IITB-proc/src/RF.vhd
+Z50 8/home/anon/Desktop/IITB-proc/src/RF.vhd
+Z51 F/home/anon/Desktop/IITB-proc/src/RF.vhd
 l0
 L8 1
 V_F2b36EWIUU6PMnB3SOR40
@@ -404,8 +404,8 @@ R6
 R7
 !i10b 1
 R8
-Z51 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/RF.vhd|
-Z52 !s107 /home/anon/Desktop/IITB-proc/src/RF.vhd|
+Z52 !s90 -reportprogress|300|-93|-work|work|/home/anon/Desktop/IITB-proc/src/RF.vhd|
+Z53 !s107 /home/anon/Desktop/IITB-proc/src/RF.vhd|
 !i113 1
 R11
 R12
@@ -424,8 +424,8 @@ R6
 R7
 !i10b 1
 R8
-R51
 R52
+R53
 !i113 1
 R11
 R12

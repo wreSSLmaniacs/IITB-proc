@@ -41,7 +41,7 @@ begin
 		begin
 			count := 0;
 			curr := 0;
-			wa <= "0000000000000001";
+			wa <= "0000000000000000";
 			
 			-- load instructions in memory
 			while not endfile(in_file) loop
@@ -67,7 +67,7 @@ begin
 			wait for 100 ns;
 	
 			rst <= '0';
-			while curr <= count+2 loop
+			while curr < count+1 loop
 				clk <= '1';
 				wait for 100 ns;
 				clk <= '0';
