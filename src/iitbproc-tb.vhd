@@ -1,3 +1,5 @@
+---------------TESTBENCH for MAIN entity--------------
+
 library work;
 use work.all;
 
@@ -42,7 +44,7 @@ begin
 		begin
 			count := 0;
 			curr := 0;
-			wa <= "0000000000000000";
+			wa <= "0000000000000000"; --initialize writing address
 			
 			-- load instructions in memory
 			while not endfile(in_file) loop

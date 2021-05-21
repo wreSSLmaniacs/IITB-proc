@@ -1,6 +1,7 @@
----------------------------------------------------------------------------------------------------------
 
--- adder
+---------------------ALU (consists of ADD and NAND )-------------------------
+
+-----ADDER (implementation style : KOGGE STONE) -----------------------------
 
 library work;
 use work.all;
@@ -8,6 +9,7 @@ use work.all;
 library IEEE;
 use IEEE.std_logic_1164.all;
 
+--Entity for generation and propagation logic 
 entity adder_prop is
 	port
 		(
@@ -20,9 +22,9 @@ end entity;
 architecture behv of adder_prop is
 	signal p0 : std_logic;
 begin
-	p0 <= P1 and G2;
-	G <= p0 or G1;
-	P <= P1 and P2;
+	p0 <= P1 and G2; 
+	G <= p0 or G1; 	-- G = P1.G2 + G1
+	P <= P1 and P2;	-- P = P1.P2
 end architecture;
 
 library work;
@@ -31,13 +33,14 @@ use work.all;
 library IEEE;
 use IEEE.std_logic_1164.all;
 
+--Implementation of 16 bit Kogge stone adder
 entity adder is
 	port
 		(
-			a,b : in std_logic_vector (15 downto 0);
-			cin : in std_logic;
-			sum : out std_logic_vector (15 downto 0);
-			cout : out std_logic
+			a,b : in std_logic_vector (15 downto 0); --inputs
+			cin : in std_logic; --carry
+			sum : out std_logic_vector (15 downto 0); -- output
+			cout : out std_logic --carry output 
 		);
 end entity;
 
@@ -137,7 +140,7 @@ end architecture;
 
 ---------------------------------------------------------------------------------------------------------
 
--- nand16
+-- Implementation of 16 bit NANDer
 
 library work;
 use work.all;
@@ -148,15 +151,16 @@ use IEEE.std_logic_1164.all;
 entity nand16 is
 	port
 		(
-			a,b : in std_logic_vector(15 downto 0);
-			o : out std_logic_vector(15 downto 0)
+			a,b : in std_logic_vector(15 downto 0); --inputs
+			o : out std_logic_vector(15 downto 0) --output
 		);
 end entity;
 
+--Implementation of bitwise NAND
 architecture behv of nand16 is
 begin
 	main : for I in 15 downto 0 generate
-		o(I) <= a(I) nand b(I);
+		o(I) <= a(I) nand b(I); 
 	end generate main;
 end;
 
@@ -165,7 +169,7 @@ end;
 
 ---------------------------------------------------------------------------------------------------------
 
--- main entity
+-- main ALU entity integrating adder and NANDer
 
 library work;
 use work.all;
@@ -176,10 +180,10 @@ use IEEE.std_logic_1164.all;
 entity ALU is
 	port
 		(
-			a,b : in std_logic_vector (15 downto 0);
-			cin, op : in std_logic;
-			o : out std_logic_vector (15 downto 0);
-			cout, zero : out std_logic
+			a,b : in std_logic_vector (15 downto 0); --inputs
+			cin, op : in std_logic; --cin is carry flag, op is operation flag
+			o : out std_logic_vector (15 downto 0); --output
+			cout, zero : out std_logic --cout is output carry, and zero is zero flag
 		);
 end entity;
 
@@ -209,8 +213,8 @@ begin
 		port map ( a => a, b => b, cin => cin, sum => add_out, cout => cout );
 	logic : nand16
 		port map ( a => a, b => b, o => nand_out );
-	f_out <= nand_out when op = '1' else add_out;
-	zero <= '1' when f_out = "0000000000000000" else '0';
+	f_out <= nand_out when op = '1' else add_out; --when op is 1 then NAND performed, when op is 0 ADD performed
+	zero <= '1' when f_out = "0000000000000000" else '0'; -- set the zero flag when output is 0
 	o <= f_out;
 end architecture;
 

@@ -1,3 +1,4 @@
+-------MAIN ENTITY integrating datapath and controller --------
 library work;
 use work.all;
 
@@ -7,11 +8,11 @@ use ieee.std_logic_1164.all;
 entity iitbproc is
 	port
 		(
-			wa, inst : in std_logic_vector(15 downto 0);
-			clk : in std_logic;
-			rst : in std_logic;
-			mem_w : in std_logic;
-			o : out std_logic_vector(15 downto 0)
+			wa, inst : in std_logic_vector(15 downto 0); --writing adress and instruction
+			clk : in std_logic; --clock 
+			rst : in std_logic; --reset 
+			mem_w : in std_logic; --master memory control 
+			o : out std_logic_vector(15 downto 0) --output
 		);
 end entity;
 

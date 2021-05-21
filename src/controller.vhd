@@ -1,3 +1,4 @@
+--------------------------------------------------CONTROLLER entity ------------------------------------------
 library work;
 use work.all;
 
@@ -34,12 +35,14 @@ entity controller is
 end entity;
 
 architecture behv of controller is
-	subtype state_labels is natural range 0 to 10;
-	signal state : state_labels := 0;
-	signal next_state : state_labels;
+	subtype state_labels is natural range 0 to 10; --defining states
+	signal state : state_labels := 0; --current state
+	signal next_state : state_labels; --next state 
 begin
 p1 : process(state, ir)
 begin
+
+--Initialize every control pin to default values(inactive pins)
 	m_we <= '0';
 	m_rac <= '0';
 	m_wac <= '0';
@@ -58,17 +61,18 @@ begin
 	rf_wc <= "00";
 	rf_dc <= "00";
 	zc <= '0';
-
+	
+	--State transitions
 	case state is 
-		when 0 => 
-			next_state <= 1;
+		when 0 => --to make it sync
+			next_state <= 1; 
 			
-		when 1 => 
-			upd_ir <= '1';
+		when 1 => --update instruction
+			upd_ir <= '1';		
 			next_state <= 2;
 			
-		when 2 =>
-			
+		when 2 => --understand instruction and proceed to compute in single state instructions
+			--set appropriate controls for ADD, ADC, ADZ, NDU, NDC, NDZ
 			if (
 			(ir(15 downto 12) = "0000" or ir(15 downto 12) = "0010") and
 			( 	ir(1 downto 0) = "00" or 
@@ -83,6 +87,7 @@ begin
 				alu_op <= ir(13);
 				next_state <= 3;
 			
+			--set appropriate controls for ADI
 			elsif (ir(15 downto 12) = "0001") then
 				upd_c <= '1';
 				upd_z <= '1';
@@ -92,6 +97,7 @@ begin
 				alu_bc <= "10";
 				next_state <= 3;
 				
+			--set appropriate controls for LHI	
 			elsif (ir(15 downto 12) = "0011") then
 				rf_dc <= "11";
 				alu_ac <= "10";
@@ -100,28 +106,34 @@ begin
 				upd_pc <= '1';
 				next_state <= 0;
 				
+			--set appropriate controls for LW	
 			elsif (ir(15 downto 12) = "0100") then
 				alu_ac <= "01";
 				next_state <= 4;
 			
+			--set appropriate controls for SW
 			elsif (ir(15 downto 12) = "0101") then
 				alu_ac <= "01";
 				m_wac <= '1';
 				m_we <= '1';
 				next_state <= 3;
 				
+			--set appropriate controls for LA
 			elsif (ir(15 downto 12) = "0110") then
 				trc <= '1';
 				next_state <= 8;
-				
+			
+			--set appropriate controls for SA
 			elsif (ir(15 downto 12) = "0111") then
 				trc <= '1';
 				next_state <= 7;
 			
+			--set appropriate controls for BEQ
 			elsif (ir(15 downto 12) = "1100") then
 				alu_cin <= '1';
 				next_state <= 6;
-				
+			
+			--set appropriate controls for JAL	
 			elsif (ir(15 downto 12) = "1000") then
 				rf_dc <= "10";
 				rf_we <= '1';
@@ -129,7 +141,8 @@ begin
 				alu_bc <= "11";
 				upd_pc <= '1';
 				next_state <= 0;
-				
+			
+			--set appropriate controls for JLR
 			elsif (ir(15 downto 12) = "1001") then
 				rf_dc <= "10";
 				rf_we <= '1';
@@ -137,20 +150,21 @@ begin
 				upd_pc <= '1';
 				next_state <= 0;
 			else
+			-- If instruction is not matching in provided list then return
 				next_state <= 0;
 			end if;
 		
-		when 3 =>
+		when 3 => --if it was a single state instruction, reset the FSM
 				alu_ac <= "10";
 				alu_bc <= "01";
 				upd_pc <= '1';
 				next_state <= 0;
 		
-		when 4 => 
+		when 4 => -- For LW operation, activate memory read control
 			m_rac <= '1';
 			next_state <= 5;
 		
-		when 5 => 
+		when 5 => --For LW operation final state, reset the FSM
 			rf_we <= '1';
 			zc <= '1';
 			upd_pc <= '1';
@@ -159,7 +173,7 @@ begin
 			next_state <= 0;
 		
 
-		when 6 =>
+		when 6 => --Final state for BEQ operation, change the branch accordingly and reset the FSM
 			alu_ac <= "10";
 			upd_pc <= '1';
 				
@@ -170,19 +184,19 @@ begin
 			end if;
 			next_state <= 0;
 			
-		when 7 =>
+		when 7 => --For SA operation 
 			rf_rc <= '1';
 			m_we <= '1';
 			alu_ac <= "11";
 			alu_bc <= "01";
 		
-		when 8 =>
+		when 8 => --For LA operation read instruction from memory
 			m_rac <= '1';
 			alu_ac <= "11";
 			alu_bc <= "01";
 			next_state <= 9;
-			
-		when 9 =>
+			 
+		when 9 => --For LA update writing controls
 			m_rac <= '1';
 			alu_ac <= "11";
 			alu_bc <= "01";
@@ -191,7 +205,7 @@ begin
 			
 
 		
-		when 10 =>
+		when 10 => --For LA update the register and go to state 3
 			rf_we <= '1';
 			rf_wc <= "11";
 			next_state <= 3;
@@ -202,12 +216,13 @@ end process;
 
 p2 : process(clk)
 begin
+--synchronous processes
 	if rising_edge(clk) then
 		if (rst = '1') then
 			state <= 0;
 		else
 			case state is
-				when 7 =>
+				when 7 => --For SA store in the register
 					if( rf_master = "111" ) then
 						rf_master <= "000";
 						state <= 3;
@@ -215,7 +230,7 @@ begin
 						rf_master <= std_logic_vector( unsigned(rf_master) + 1);
 					end if;
 					
-				when 9 => 
+				when 9 =>  --For LA read from the register
 					rf_master <= std_logic_vector( unsigned(rf_master) + 1);
 					if( rf_master = "110" ) then
 						state <= 10;

@@ -1,3 +1,4 @@
+----------------------------------------DATAPATH entity----------------------------------------
 library work;
 use work.all;
 
@@ -71,14 +72,18 @@ architecture behv of datapath is
 		);
 	end component;
 	
+	--register signals
 	signal rf_r1, rf_r2, rf_w : std_logic_vector(2 downto 0);
 	signal rf_data, rf_out1, rf_out2 : std_logic_vector(15 downto 0);
 	
+	--ALU signals
 	signal alu_a, alu_b, alu_o : std_logic_vector(15 downto 0);
 	signal alu_c, alu_z : std_logic;
 	
+	--memory signals 
 	signal m_read, m_write, m_data, m_out : std_logic_vector(15 downto 0);
 	
+	--pc and tr
 	signal pc, tr : std_logic_vector(15 downto 0) := (others => '0');
 	
 	signal ext9bit : std_logic_vector (15 downto 0) := "0000000000000000";
@@ -124,11 +129,13 @@ begin
 		signext9(idx) <= ir(8);
 	end generate;
 	
+	--define memory operations using memory controls
 	m_data <= master_data when(master_wc = '1') else rf_out1;
 	m_write <= master_wa when (master_wc = '1') else
 					alu_o when (m_wac = '1') else tr;
 	m_read <= tr when (m_rac = '1') else pc;
 	
+	--define register operations using register controls
 	rf_r1 <= rf_master when (rf_rc = '1') else ir(11 downto 9);
 	rf_r2 <= ir(8 downto 6);
 	rf_w <=  ir(11 downto 9) when (rf_wc = "00") else
@@ -139,7 +146,8 @@ begin
 					alu_o when (rf_dc = "01") else
 					pc when (rf_dc = "10") else
 					ext9bit;
-
+	
+	--define ALU operations using ALU controls
 	alu_a <= rf_out1 when (alu_ac = "00") else
 				signext6 when (alu_ac = "01") else
 				pc when (alu_ac = "10") else
@@ -148,27 +156,30 @@ begin
 				"0000000000000001" when (alu_bc = "01") else
 				signext6 when (alu_bc = "10") else
 				signext9;
-
+				
+	--default value for sync operations
 	mem0 <= '1' when (m_out = "0000000000000000") else '0';
 	z_combine <= mem0 when (zc = '1') else alu_z;
 	
 	tr_combine <= rf_out1 when (trc = '1') else alu_o;
 	pc_combine <= rf_out2 when (pc_c = '1') else alu_o;
 	z_imm <= alu_z;
+	
+	--synchronous operations
 	main : process(clk)
 	begin
 		if rising_edge(clk) then
-			tr <= tr_combine;
-			if upd_z = '1' then
+			tr <= tr_combine; --update tr
+			if upd_z = '1' then --update zero
 				z <= z_combine;
 			end if;
-			if upd_c = '1' then
+			if upd_c = '1' then --update carry
 				c <= alu_c;
 			end if;
-			if upd_pc = '1' then
+			if upd_pc = '1' then --update pc
 				pc <= pc_combine;
 			end if;
-			if upd_ir = '1' then
+			if upd_ir = '1' then --update instruction
 				ir <= m_out;
 			end if;
 		end if;
