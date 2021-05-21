@@ -29,7 +29,9 @@ entity datapath is
 			-- state inference pins
 			ir : buffer std_logic_vector(15 downto 0);
 			c,z : buffer std_logic;
-			z_imm : out std_logic
+			z_imm : out std_logic;
+			
+			o : out std_logic_vector(15 downto 0)
 		);
 end entity;
 
@@ -65,7 +67,7 @@ architecture behv of datapath is
 			wa : in std_logic_vector (2 downto 0);
 			we : in std_logic;
 			ra1, ra2 : in std_logic_vector (2 downto 0);
-			o1, o2 : out std_logic_vector (15 downto 0)
+			o1, o2, o : out std_logic_vector (15 downto 0)
 		);
 	end component;
 	
@@ -99,7 +101,7 @@ begin
 		port map (clk => clk, data => m_data, wa => m_write, ra => m_read, we => mem_we, o => m_out );
 	
 	rf_instance : RF
-		port map (clk => clk, data => rf_data, wa => rf_w, ra1 => rf_r1, ra2 => rf_r2, we => rf_we, o1 => rf_out1, o2 => rf_out2);
+		port map (clk => clk, data => rf_data, wa => rf_w, ra1 => rf_r1, ra2 => rf_r2, we => rf_we, o1 => rf_out1, o2 => rf_out2, o=>o);
 		
 	-- 9 bit imm to most significant
 	fg1 : for idx in 15 downto 7 generate

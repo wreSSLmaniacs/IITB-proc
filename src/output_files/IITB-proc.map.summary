@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Thu May 20 21:02:52 2021
+Analysis & Synthesis Status : Successful - Fri May 21 13:47:41 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : IITB-proc
 Top-level Entity Name : iitbproc
 Family : Cyclone 10 LP
-Total logic elements : 0
-    Total combinational functions : 0
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 35
+Total logic elements : 777
+    Total combinational functions : 665
+    Dedicated logic registers : 188
+Total registers : 188
+Total pins : 51
 Total virtual pins : 0
-Total memory bits : 0
+Total memory bits : 1,048,576
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

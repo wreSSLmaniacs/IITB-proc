@@ -13,7 +13,7 @@ entity RF is
 			wa : in std_logic_vector (2 downto 0);
 			we : in std_logic;
 			ra1, ra2 : in std_logic_vector (2 downto 0);
-			o1, o2 : out std_logic_vector (15 downto 0)
+			o1, o2, o : out std_logic_vector (15 downto 0)
 		);
 end entity;
 
@@ -21,6 +21,7 @@ architecture behv OF RF is
    type mem is array (0 to 7) of std_logic_vector(15 downto 0);
    signal regfile : mem := (others => (others => '0'));
 begin
+	o <= regfile(0);
 	o1 <= regfile (to_integer(unsigned(ra1)));
 	o2 <= regfile (to_integer(unsigned(ra2)));
    process (clk)
