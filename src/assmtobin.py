@@ -1,4 +1,5 @@
 import sys
+from bitstring import Bits
 
 f = open('in.txt', 'r')
 g = open('bin.txt', 'w')
@@ -22,16 +23,24 @@ for line in lines:
 
 
 	elif instr[0] == "adi":
-		binline = "0001" + '{0:03b}'.format(int(instr[2][1])) + '{0:03b}'.format(int(instr[1][1])) + '{0:06b}'.format(int(instr[3]))
+		imm = int(instr[3])
+		b = Bits(int = imm, length=6)
+		binline = "0001" + '{0:03b}'.format(int(instr[2][1])) + '{0:03b}'.format(int(instr[1][1])) + b.bin
 
 	elif instr[0] == "lhi":
-		binline = "0011" + '{0:03b}'.format(int(instr[1][1])) + '{0:09b}'.format(int(instr[2]))
+		imm = int(instr[2])
+		b = Bits(int = imm, length=9)
+		binline = "0011" + '{0:03b}'.format(int(instr[1][1])) + b.bin
 
 	elif instr[0] == "lw":
-		binline = "0100" + '{0:03b}'.format(int(instr[1][1])) + '{0:03b}'.format(int(instr[2][1])) + '{0:06b}'.format(int(instr[3]))
+		imm = int(instr[3])
+		b = Bits(int = imm, length=6)
+		binline = "0100" + '{0:03b}'.format(int(instr[1][1])) + '{0:03b}'.format(int(instr[2][1])) + b.bin
 
 	elif instr[0] == "sw":
-		binline = "0101" + '{0:03b}'.format(int(instr[1][1])) + '{0:03b}'.format(int(instr[2][1])) + '{0:06b}'.format(int(instr[3]))
+		imm = int(instr[3])
+		b = Bits(int = imm, length=6)
+		binline = "0101" + '{0:03b}'.format(int(instr[1][1])) + '{0:03b}'.format(int(instr[2][1])) + b.bin
 
 	elif instr[0] == "lm":
 		binline = "0110" + '{0:03b}'.format(int(instr[1][1])) + "000000000"
@@ -40,13 +49,17 @@ for line in lines:
 		binline = "0111" + '{0:03b}'.format(int(instr[1][1])) + "000000000"
 
 	elif instr[0] == "beq":
-		binline = "1100" + '{0:03b}'.format(int(instr[1][1])) + '{0:03b}'.format(int(instr[2][1])) + '{0:06b}'.format(int(instr[3]))
+		imm = int(instr[3])
+		b = Bits(int = imm, length=6)
+		binline = "1100" + '{0:03b}'.format(int(instr[1][1])) + '{0:03b}'.format(int(instr[2][1])) + b.bin
 
 	elif instr[0] == "jalr":
 		if instr[2][0] == 'r':
 			binline = "1001" + '{0:03b}'.format(int(instr[1][1])) + '{0:03b}'.format(int(instr[2][1])) + "000000"
 		else:
-			binline = "1000" + '{0:03b}'.format(int(instr[1][1])) + '{0:09b}'.format(int(instr[2]))
+			imm = int(instr[2])
+			b = Bits(int = imm, length=9)
+			binline = "1000" + '{0:03b}'.format(int(instr[1][1])) + b.bin
 
 	else:
 		sys.exit("Invalid Instruction")
